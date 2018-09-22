@@ -1,0 +1,24 @@
+2018-09-22 15:51:17,235  - INFO - Starting new HTTP connection (1): 127.0.0.1
+2018-09-22 15:51:17,343  - INFO - Resetting dropped connection: 127.0.0.1
+2018-09-22 15:51:17,350  - INFO - ----  请求url=http://127.0.0.1:8080/api/get_shop_list?code=b4c26eca-ba87-11e8-a5f8-bc5ff48e988d        ----
+2018-09-22 15:51:17,351  - INFO - ----  请求参数={'code': 'b4c26eca-ba87-11e8-a5f8-bc5ff48e988d'}        ----
+2018-09-22 15:51:17,480  - INFO - Resetting dropped connection: 127.0.0.1
+2018-09-22 15:51:17,486  - INFO - ----  请求url=http://127.0.0.1:8080/api/get_shop_list?code=b4c26eca-ba87-11e8-a5f8-bc5ff48e988d&a=b55b0790-ba87-11e8-aeb1-bc5ff48e988d        ----
+2018-09-22 15:51:17,487  - INFO - ----  请求参数={'a': 'b55b0790-ba87-11e8-aeb1-bc5ff48e988d', 'code': 'b4c26eca-ba87-11e8-a5f8-bc5ff48e988d'}        ----
+2018-09-22 15:51:17,592  - INFO - Resetting dropped connection: 127.0.0.1
+2018-09-22 15:51:17,600  - INFO - ----  请求url=http://127.0.0.1:8080/api/get_shop_list?a=b55b0790-ba87-11e8-aeb1-bc5ff48e988d        ----
+2018-09-22 15:51:17,600  - INFO - ----  请求参数={'a': 'b55b0790-ba87-11e8-aeb1-bc5ff48e988d'}        ----
+2018-09-22 15:51:17,683  - INFO - Resetting dropped connection: 127.0.0.1
+2018-09-22 15:51:17,689  - INFO - ----  请求url=http://127.0.0.1:8080/api/get_shop_list        ----
+2018-09-22 15:51:17,689  - INFO - ----  请求参数={}        ----
+2018-09-22 15:51:17,782  - INFO - Resetting dropped connection: 127.0.0.1
+2018-09-22 15:51:17,788  - INFO - ----  请求url=http://127.0.0.1:8080/api/get_shop_list?code=1&a=2        ----
+2018-09-22 15:51:17,788  - INFO - ----  请求参数={"code": 1, "a":"2"}        ----
+2018-09-22 15:51:17,788  - INFO - ----  检查点=通过   END     ----
+2018-09-22 15:51:17,949  - INFO - Resetting dropped connection: 127.0.0.1
+2018-09-22 15:51:17,954  - INFO - ----  请求url=http://127.0.0.1:8080/api/save_shop        ----
+2018-09-22 15:51:17,955  - INFO - ----  请求参数={'BigIntSupported': 'c31e4798-be3b-11e8-b0e4-bc5ff48e988d', 'status': 'c3b70762-be3b-11e8-809e-bc5ff48e988d', 'data': 'c61a0694-be3b-11e8-bfe0-bc5ff48e988d'}        ----
+2018-09-22 15:51:18,039  - INFO - Resetting dropped connection: 127.0.0.1
+2018-09-22 15:51:18,045  - INFO - ----  请求url=http://127.0.0.1:8080/api/save_shop        ----
+2018-09-22 15:51:18,046  - INFO - ----  请求参数={"BigIntSupported":995815895020119788889,"date":"20180322","message":"Success !","status":200,"city":"北京","count":632,"data":{"shidu":"34%","pm25":73,"pm10":91,"quality":"良","wendu":"5","ganmao":"极少数敏感人群应减少户外活动","yesterday":{"date":"21日星期三","sunrise":"06:19","high":"高温 11.0℃","low":"低温 1.0℃","sunset":"18:26","aqi":85,"fx":"南风","fl":"<3级","type":"多云","notice":"阴晴之间，谨防紫外线侵扰"},"forecast":[{"date":"22日星期四","sunrise":"06:17","high":"高温 17.0℃","low":"低温 1.0℃","sunset":"18:27","aqi":98,"fx":"西南风","fl":"<3级","type":"晴","notice":"愿你拥有比阳光明媚的心情"},{"date":"23日星期五","sunrise":"06:16","high":"高温 18.0℃","low":"低温 5.0℃","sunset":"18:28","aqi":118,"fx":"无持续风向","fl":"<3级","type":"多云","notice":"阴晴之间，谨防紫外线侵扰"},{"date":"24日星期六","sunrise":"06:14","high":"高温 21.0℃","low":"低温 7.0℃","sunset":"18:29","aqi":52,"fx":"西南风","fl":"<3级","type":"晴","notice":"愿你拥有比阳光明媚的心情"},{"date":"25日星期日","sunrise":"06:13","high":"高温 22.0℃","low":"低温 7.0℃","sunset":"18:30","aqi":71,"fx":"西南风","fl":"<3级","type":"晴","notice":"愿你拥有比阳光明媚的心情"},{"date":"26日星期一","sunrise":"06:11","high":"高温 21.0℃","low":"低温 8.0℃","sunset":"18:31","aqi":97,"fx":"西南风","fl":"<3级","type":"多云","notice":"阴晴之间，谨防紫外线侵扰"}]}}        ----
+2018-09-22 15:51:18,058  - INFO - ----  检查点=失败   END     ----

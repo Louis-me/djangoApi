@@ -1,0 +1,64 @@
+
+<div class="modal fade " id="modal-case">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">操作用例</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form" id="m-form">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">用例名</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="name" id="name" class="form-control" required /></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">协议</label>
+                        <div class="col-sm-8">
+                           <select id="sel-pro" name="sel-pro">
+                                <option value="http">http</option>
+                                <option value="https">https</option>
+                            </select>
+                        </div></div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">url</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="url" id="url" class="form-control" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">方法</label>
+                        <div class="col-sm-8">
+                            <select id="sel-method" name="sel-method">
+                                <option value="post">post</option>
+                                <option value="get">get</option>
+                            </select>
+                        </div>
+                    </div>
+                         <div class="form-group">
+                            <label class="col-sm-2 control-label">入参</label>
+                            <div class="col-sm-8">
+                              <textarea id="params" name="params" cols="40"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">期望值</label>
+                            <div class="col-sm-8">
+                              <textarea id="hope" name="hope" cols="40"></textarea>
+                            </div>
+                        </div>
+                            <div class="form-group" style="margin-left:100px;">
+                                <button type="submit" class="btn btn-default btn-modal-new" datadismiss="modal" id="btn-case-module">
+                                    确定</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">取消
+                                </button>
+                            </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
