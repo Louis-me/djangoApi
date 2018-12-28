@@ -1,98 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
+{% include 'api/header.html' %}
 
-    <head>{% load static %}
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <!--<link rel="icon" href="../../favicon.ico">-->
-        <title>Dashboard Template for Bootstrap</title>
-        <link href="{% static  'dist/css/bootstrap.min.css' %}" rel="stylesheet" />
-        <link href="{% static 'css/dashboard.css' %}" rel="stylesheet">
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-    </head>
+<body>
+{% include 'api/nav-top.html' %}
 
-    <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span>
- <span class="icon-bar"></span>
- <span class="icon-bar"></span>
- <span class="icon-bar"></span>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a>
+                </li>
+                <li><a href="{% url 'index'  %}">DashBoard</a>
+                </li>
+                <li><a href="{% url 'login'  %}" style="color:red">登录</a>
+                </li>
+                <li><a href="{% url 'module'  %}">模块</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+             <h1 class="page-header">登录</h1>
 
-                    </button> <a class="navbar-brand" href="#">Project name</a>
-
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Dashboard</a>
-                        </li>
-                        <li><a href="#">Settings</a>
-                        </li>
-                        <li><a href="#">Profile</a>
-                        </li>
-                        <li><a href="#">Help</a>
-                        </li>
-                    </ul>
-                    <form class="navbar-form navbar-right">
-                        <input type="text" class="form-control" placeholder="Search...">
-                    </form>
-                </div>
+            <form class="form-horizontal" role="form" id="m-form">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">url</label>
+                <div class="col-sm-8">
+                    <input type="text" name="url" id="url" class="form-control" required value="{{login.url}}" style="width:400px" /></div>
             </div>
-        </nav>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-3 col-md-2 sidebar">
-                    <ul class="nav nav-sidebar">
-                        <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li><a href="{% url 'index'  %}">DashBroad</a>
-                        </li>
-                        <li><a href="{% url 'login'  %}">登录</a>
-                        </li>
-                        <li><a href="{% url 'module'  %}">模块</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                     <h1 class="page-header">登录</h1>
-
-                    <form class="form-horizontal" role="form" id="m-form">
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">url</label>
-                        <div class="col-sm-8">
-                            <input type="text" name="url" id="url" class="form-control" required value="{{login.url}}" style="width:400px" /></div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">入参</label>
+                    <div class="col-sm-8">
+                      <textarea id="params" name="params" cols="80" rows="10" style="width:400px;">{{login.params}}</textarea>
                     </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">期望值</label>
-                            <div class="col-sm-8">
-                              <textarea id="params" name="params" cols="80" style="width:400px;">{{login.params}}</textarea>
-                            </div>
-                        </div>
-                            <div class="form-group" style="margin-left:220px;">
-                                <button type="submit" class="btn btn-default" id="btn-confirm">确定</button>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">取消
-                                </button>
-                            </div>
-                </form>
                 </div>
-            </div>
-        </div>{% include 'api/del.html' %} {% include 'api/edit-case.html' %}
-        <script src=" {% static 'js/jquery-1.12.4.js'%}"></script>
-        <script>window.jQuery || document.write('<script src="{% static   'assets/js/vendor/jquery.min.js' %}"><\/script>')</script>
-        <script src="{% static 'js/jquery-validation-1.17.0/jquery.validate.js' %}"></script>
-
-        <script src=" {% static 'js/login.js'%}"></script>
-        <script src="{% static  'dist/js/bootstrap.min.js' %}"></script>
-        <script src="{% static  'assets/js/vendor/holder.min.js' %}"></script>
-        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script src="{% static 'assets/js/ie10-viewport-bug-workaround.js' %}"></script>
-    </body>
+                    <div class="form-group" style="margin-left:220px;">
+                        <button type="submit" class="btn btn-default" id="btn-confirm">确定</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">取消
+                        </button>
+                    </div>
+        </form>
+        </div>
+    </div>
+</div>
+{% include 'api/del.html' %}
+{% include 'api/edit-case.html' %}
+{% include 'api/foot.html' %}
+<script src=" {% static 'js/login.js'%}"></script>
+</body>
 </html>

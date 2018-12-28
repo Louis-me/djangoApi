@@ -62,8 +62,11 @@ class Case(models.Model):
 
 class FuzzCase(models.Model):
     case = models.ForeignKey(Case, on_delete=models.CASCADE)
-    name = models.CharField(max_length=100)
-    params = models.CharField(max_length=1000)
+    name = models.CharField(max_length=100, default='')
+    url = models.CharField(max_length=100, default='')
+    protocol = models.CharField(max_length=10, default='')
+    method = models.CharField(max_length=10, default='')
+    params = models.CharField(max_length=1000, default='')
     hope = models.CharField(max_length=100, null=True)
 
     def __str__(self):

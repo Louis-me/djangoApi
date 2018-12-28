@@ -19,12 +19,13 @@
 
 
 ## 运行
-- 为本机ip
+- 直接用本机ip或者127.0.0.0:8080/api访问即可
 
 ```
-python manage.py runserver 192.168.1.100:8000
+python manage.py runserver 0.0.0.0:8000
 
 ```
+
 
 ## 结果展示
 

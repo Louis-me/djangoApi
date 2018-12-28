@@ -1,0 +1,31 @@
+2018-12-28 11:23:47,600  - INFO - ----  请求url=http://127.0.0.1:8080/api/get_shop_list?code=3f4cefc0-0a4e-11e9-aeeb-bcee7b76a849        ----
+2018-12-28 11:23:47,600  - INFO - ----  请求参数={'code': '3f4cefc0-0a4e-11e9-aeeb-bcee7b76a849'}        ----
+2018-12-28 11:23:47,636  - INFO - ----  请求url=http://127.0.0.1:8080/api/get_shop_list?a=3fe5b248-0a4e-11e9-990b-bcee7b76a849&code=3f4cefc0-0a4e-11e9-aeeb-bcee7b76a849        ----
+2018-12-28 11:23:47,636  - INFO - ----  请求参数={'code': '3f4cefc0-0a4e-11e9-aeeb-bcee7b76a849', 'a': '3fe5b248-0a4e-11e9-990b-bcee7b76a849'}        ----
+2018-12-28 11:23:47,690  - INFO - ----  请求url=http://127.0.0.1:8080/api/get_shop_list        ----
+2018-12-28 11:23:47,690  - INFO - ----  请求参数={"code": 1, "a":"2"}        ----
+2018-12-28 11:23:47,756  - ERROR - Internal Server Error: /api/run
+Traceback (most recent call last):
+  File "E:\app\Python35\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "E:\app\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\app\Python35\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\app\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\demo\djangoApi\api\views.py", line 162, in run
+    return BaseViewModule.run(mid)
+  File "E:\app\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\demo\djangoApi\api\base\BaseViewModule.py", line 87, in run
+    f_result = _check({"hope": c.hope, "fact": resp.text})
+  File "E:\demo\djangoApi\api\base\BaseView.py", line 42, in _check
+    fact = json.loads(kw["fact"])
+  File "E:\app\Python35\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "E:\app\Python35\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "E:\app\Python35\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)

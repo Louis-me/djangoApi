@@ -17,6 +17,15 @@ var id = 0
             }
         }
     }
+    $("#btn-module-new").click(function(){
+        $("#modal-case").modal("show")
+        $("#url").val($("#curl").val())
+        $("#name").val($("#cname").val())
+         $("#sel-pro").val($("#cpro").val())
+         $("#sel-method").val($("#cmethod").val())
+         $("#params").val($("#cparams").val())
+         $("#hope").val($("#chope").val())
+    })
     // 模糊生成用例
     $("#btn-fuzz-batch").click(function(){
         if ($(".table-striped>tbody>tr:eq(0)").attr("id")) {
@@ -26,7 +35,7 @@ var id = 0
         $("#modal-operate").modal("show")
 
             $.ajax({　　
-             url: '../../batch_fuzz',
+             url: '../../../batch_fuzz',
              　　type: "post",
              　　dataType: "json",
              　　data: {　　　　
@@ -38,7 +47,7 @@ var id = 0
                  }
              },
              error: function (e) {
-                 alert("失败")
+                 alert("暂时只支持{}开头的json")
                  location.reload()
              }
          })
@@ -46,6 +55,7 @@ var id = 0
     })
      $(".btn-edit").click(function () {
          edit = 1
+          id = $(this).parents("tr").attr("id")
          name = $(this).parents("td").prevAll(":eq(5)").text()
          id = $(this).parents("tr").attr("id")
          pro = $(this).parents("td").prevAll(":eq(4)").text()
@@ -67,7 +77,7 @@ var id = 0
      })
      $("#btn-modal-confirm").click(function () {
          $.ajax({　　
-             url: '../../fuzz_del',
+             url: '../../../fuzz_del',
              　　type: "post",
              　　dataType: "json",
              　　data: {　　　　
@@ -127,19 +137,20 @@ var id = 0
         }
 
          $.ajax({　　
-             url: '../../fuzz_new',
+             url: '../../../fuzz_new',
              　　type: "post",
              　　dataType: "json",
              　　data: {　　　　
                  "name": $("#name").val(),
-//                 "url": $("#url").val(),
-//                 "method": $("#sel-method").val(),
-//                 "protocol":$("#sel-pro").val(),
+                 "url": $("#url").val(),
+                 "method": $("#sel-method").val(),
+                 "protocol":$("#sel-pro").val(),
                  "params": $("#params").val(),
                  "hope": $("#hope").val(),
                  "cid": $("#cid").val()
              },
              　　success: function (data) {
+                   alert("新建用例成功")
                  location.reload()
              },
              error: function (e) {
@@ -151,7 +162,7 @@ var id = 0
 
      function EditCase() {
          $.ajax({　　
-             url: '../../case_edit',
+             url: '../../../fuzz_edit',
              　　type: "post",
              　　dataType: "json",
              　　　data: {　　　　
@@ -161,7 +172,7 @@ var id = 0
                  "protocol":$("#sel-pro").val(),
                  "params": $("#params").val(),
                  "hope": $("#hope").val(),
-                 "cid": id
+                 "fid": id
              },
              　　success: function (data) {　　　　 //要执行的代码
                   if (data["code"] == 0) {

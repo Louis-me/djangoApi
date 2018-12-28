@@ -10,7 +10,6 @@ from api.base.BaseExcel import OperateReport
 from api.base.BaseFile import BaseFile
 from api.models import Login, Report
 
-c_check = {"passed": 0, "failed": -1, "no_check": -2}
 
 '''
 登录
@@ -28,31 +27,38 @@ def get_session():
 
 '''
 检查点
-kw[hope]
-kw[fact]
+kw[hope]|'{"a": "b"}'
+kw[fact]|
+a1 = '{"a": "b", "c": "d"}'   直接找值
+a2 = '{"a": "b", "c": "d", "data":{"a": "b1"}}' 找data里面的值
+a3 = '[{"a":"b"},{"c":"d"}]' 找list重dict里的值
 '''
 
 
 def _check(kw):
-    try:
-        hope = ast.literal_eval(kw["hope"])
-        fact = ast.literal_eval(kw["fact"])
+    if len(kw["hope"]) == 0 or len(kw["fact"]) == 0:
+        return Element.C_CHECK["no_check"]
+    print("===value=%s=type=%s=" % (kw["fact"], type(kw["fact"])))
+    hope = ast.literal_eval(kw["hope"])
+    fact = ast.literal_eval(kw["fact"])
+    # hope = ast.literal_eval(kw["hope"])
+    # fact = ast.literal_eval(kw["fact"])
+    if type(fact) == dict:
         for items in fact:
-            if type(fact[items]) == list:
-                for item in fact[items]:
-                    for k in hope:
-                        if item.get(k, "") == hope[k]:
-                            return c_check["passed"]
             if type(fact[items]) == dict:
                 for k in hope:
                     if fact[items].get(k, "") == hope[k]:
-                        return c_check["passed"]
+                        return Element.C_CHECK["passed"]
             for k in hope:
                 if fact.get(k, "") == hope[k]:
-                    return c_check["passed"]
-        return c_check["failed"]
-    except:
-        return c_check["failed"]
+                    return Element.C_CHECK["passed"]
+    elif type(fact) == list:
+        for i in fact:
+            print(i)
+            for k in hope:
+                if i.get(k, "") == hope[k]:
+                    return Element.C_CHECK["passed"]
+    return Element.C_CHECK["failed"]
 
 
 '''
@@ -112,7 +118,6 @@ def new_report_item(kw):
 def write_excel(kw):
     bf = BaseFile()
     files = Element.REPORT_FILE + "\\" + kw["uid"] + ".xlsx"
-    print(files)
     bf.mk_file(files)
 
     workbook = xlsxwriter.Workbook(files, {"string_to_urls": False})

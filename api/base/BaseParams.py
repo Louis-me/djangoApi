@@ -2,7 +2,7 @@ import ast
 import os
 import uuid
 import time
-from .BaseFile import BaseFile
+from .BaseFile import BaseFile as bf
 from .BaseElementEnmu import Element
 
 
@@ -25,7 +25,6 @@ class BaseParams(object):
     def param_fi(self, param):
         param = ast.literal_eval(param)
         bpp = {}
-        bf = BaseFile()
         for k in param:
             _para = self.__param_format(k)
             bpp[k] = [
@@ -37,7 +36,7 @@ class BaseParams(object):
                 v = str(j)
                 value = v[2:len(v) - 2]
                 _t_value = _t_value + value + ","
-            bf.write(Element.PICT_PARAM, _t_value[0:len(_t_value) - 1])
+            bf.mk_write(Element.PICT_PARAM, _t_value[0:len(_t_value) - 1])
         self.__pict_wire()
         time.sleep(2)
         pict_param = self.__read_pict_param()
@@ -57,7 +56,7 @@ class BaseParams(object):
     # 读取pict已经生成的参数，并处理
     def __read_pict_param(self):
         result = []
-        _result = BaseFile().read(Element.PICT_PARAM_RESULT)
+        _result = bf.mk_read(Element.PICT_PARAM_RESULT)
         for i in range(1, len(_result)):
             v = _result[i][0].split(",")
             s = []
@@ -94,7 +93,6 @@ class BaseParams(object):
         return _result
 
     def __param_format(self, key):
-        print("====%s" % key)
         param_type = {
             str: lambda: str(uuid.uuid1()),
             list: lambda: [],

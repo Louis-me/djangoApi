@@ -13,3 +13,4 @@ class Element(object):
     ERROR_EMPTY = "error_empty"
     ERROR_VALUE = "error_value"
     RIGHT_VALUE = "right_value"
+    C_CHECK = {"passed": 0, "failed": -1, "no_check": -2}
