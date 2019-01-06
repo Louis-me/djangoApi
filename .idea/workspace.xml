@@ -2,40 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e35508a1-1acd-45e3-b99e-370013e083e6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/base/BaseViewTask.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/base/BaseViewTaskModule.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/static/js/task.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/static/js/taskModule.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/templates/api/edit-task-module.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/templates/api/edit-task.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/templates/api/task.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/templates/api/taskModule.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/Log/e13983dc-0a88-11e9-8576-bcee7b76a849.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/Log/ec03cfc6-0a4f-11e9-89db-bcee7b76a849.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/Log/f5bb7964-0a87-11e9-85b3-bcee7b76a849.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/Log/fd0a4674-0a4f-11e9-a2b1-bcee7b76a849.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/Log/param.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/Log/param_result.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/base/BaseExcel.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/base/BaseExcel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/base/BaseLog.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/base/BaseLog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/base/BaseView.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/base/BaseView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/base/BaseViewFuzz.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/base/BaseViewFuzz.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/base/BaseViewModule.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/base/BaseViewModule.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/static/js/case.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/static/js/case.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/static/js/fuzz.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/static/js/fuzz.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/static/js/module.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/static/js/module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/templates/api/case.html" beforeDir="false" afterPath="$PROJECT_DIR$/api/templates/api/case.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/templates/api/fuzz.html" beforeDir="false" afterPath="$PROJECT_DIR$/api/templates/api/fuzz.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/templates/api/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/api/templates/api/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/templates/api/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/api/templates/api/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/templates/api/module.html" beforeDir="false" afterPath="$PROJECT_DIR$/api/templates/api/module.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/use.md" beforeDir="false" afterPath="$PROJECT_DIR$/use.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,30 +16,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/base/BaseViewTask.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2223">
-              <caret line="117" column="21" selection-start-line="117" selection-start-column="21" selection-end-line="117" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/base/BaseExcel.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/base/BaseFile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
+            <state relative-caret-position="57">
               <caret line="3" selection-start-line="3" selection-end-line="3" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -111,7 +57,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/base/BaseViewTaskModule.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="589">
@@ -119,6 +65,30 @@
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/use.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-405">
+                <caret line="4" selection-start-line="4" selection-end-line="5" selection-end-column="25" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="342">
+                <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -226,7 +196,6 @@
         <option value="$PROJECT_DIR$/api/templates/api/edit-fuzz.html" />
         <option value="$PROJECT_DIR$/api/base/BaseParams.py" />
         <option value="$PROJECT_DIR$/djangoApi/settings.py" />
-        <option value="$PROJECT_DIR$/CHANGELOG.md" />
         <option value="$PROJECT_DIR$/use.md" />
         <option value="$PROJECT_DIR$/api/templates/api/login.html" />
         <option value="$PROJECT_DIR$/api/templates/api/edit-task.html" />
@@ -253,6 +222,7 @@
         <option value="$PROJECT_DIR$/api/base/BaseViewTask.py" />
         <option value="$PROJECT_DIR$/api/templates/api/index.html" />
         <option value="$PROJECT_DIR$/api/base/BaseExcel.py" />
+        <option value="$PROJECT_DIR$/CHANGELOG.md" />
       </list>
     </option>
   </component>
@@ -266,7 +236,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -320,6 +289,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -523,16 +493,6 @@
     <entry file="file://$PROJECT_DIR$/api/templates/api/edit-module.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="266">
-            <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/djangoApi/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -551,16 +511,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="26" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="14" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/use.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="76">
-            <caret line="4" selection-start-line="4" selection-end-line="5" selection-end-column="25" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -755,10 +705,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/static/js/module.js">
+    <entry file="file://$PROJECT_DIR$/api/base/BaseViewTask.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="2223">
+          <caret line="117" column="21" selection-start-line="117" selection-start-column="21" selection-end-line="117" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -771,20 +724,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/base/BaseFile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
+        <state relative-caret-position="57">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/base/BaseParams.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -820,13 +763,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/base/BaseViewTask.py">
+    <entry file="file://$PROJECT_DIR$/api/base/BaseParams.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2223">
-          <caret line="117" column="21" selection-start-line="117" selection-start-column="21" selection-end-line="117" selection-end-column="21" />
+        <state relative-caret-position="456">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/static/js/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -837,6 +787,26 @@
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/use.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-405">
+            <caret line="4" selection-start-line="4" selection-end-line="5" selection-end-column="25" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="342">
+            <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
