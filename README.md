@@ -30,7 +30,7 @@ python manage.py runserver 0.0.0.0:8000
 
 ## 结果展示
 
-![dashborad.jpg](img/dashborad.jpg )
+![dashborad.png](img/dashborad.png )
 
 ![fuzz.jpg](img/fuzz.jpg "detail.jpg")
 ![report.jpg](img/report.jpg "detail.jpg")
