@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% include 'api/header.html' %}
+
+<body>
+{% include 'api/nav-top.html' %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a>
+                </li>
+                <li><a href="{% url 'index'  %}">DashBoard</a>
+                </li>
+                <li><a href="{% url 'login'  %}" >登录</a>
+                </li>
+                <li><a href="{% url 'module'  %}" >模块</a>
+                </li>
+                 <li><a href="{% url 'task'  %}"  style="color:red;">任务</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+             <ol class="breadcrumb">
+                  <li><a href="{% url 'task'  %}">任务</a></li>
+                  <li><a href="#">关联任务</a></li>
+            </ol>
+             <h1 class="page-header">{{name}}--关联模块</h1>
+
+             <button type="button" class="btn btn-primary" id="btn-task-new-module">新建关联模块</button>
+            <input type="hidden" id="tid" value="{{tid}}" />
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>模块名</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% if ta_module_list %}
+                    {% for i in ta_module_list %}
+                    <tr id="{{i.id}}" mid="{{i.mid}}">
+                        <td>{{i.name}}</td>
+                        <td>
+                            <input type="button" class="btn btn-lg btn-primary btn-edit" value="编辑">
+                            <button  class="btn btn-lg btn-primary btn-del"> 删除</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    {% else %}
+                    <tr>
+                        <td>无数据</td>
+                    </tr>
+                    {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'api/del.html' %}
+{% include 'api/edit-task-module.html' %}
+{% include 'api/foot.html' %}
+<script src="{% static  'js/taskModule.js' %}"></script>
+
+</body>
+</html>

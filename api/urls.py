@@ -23,6 +23,13 @@ urlpatterns = [
     path('fuzz_new', views.fuzz_new, name='fuzz_new'),
     path('fuzz_edit', views.fuzz_edit, name='fuzz_edit'),
     path('fuzz_del', views.fuzz_del, name='fuzz_del'),
-    path('run', views.run, name='run')
-    # path('module', views)
+    path('task', views.task, name="task"),
+    path('task_new', views.task_new, name="task_new"),
+    path('task_edit', views.task_edit, name="task_edit"),
+    path('task_del', views.task_del, name="task_del"),
+    path('task_run', views.task_run, name="task_run"),
+    path('task_module_new', views.task_module_new, name="task_module_new"),
+    path('<int:id>/task_module/', views.task_module, name="task_module"),
+    path('task_module_edit', views.task_module_edit, name="task_module_edit"),
+    path('task_module_del', views.task_module_del, name="task_module_del")
 ]

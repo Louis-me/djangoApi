@@ -71,3 +71,14 @@ class FuzzCase(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Task(models.Model):
+    name = models.CharField(max_length=100, default="")
+
+
+# 关联任务和模块
+class TaskModule(models.Model):
+    mid = models.IntegerField(default=0)
+    name = models.CharField(max_length=100, default="")
+    task = models.ForeignKey(Task, on_delete=models.CASCADE)

@@ -1,9 +1,14 @@
+from django.http import HttpResponse
+from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
+
+from api.base.BaseViewTaskModule import BaseViewTaskModule
 from .base.BaseViewDashboard import BaseViewDashboard
 from .base.BaseViewLogin import BaseViewLogin
 from .base.BaseViewModule import BaseViewModule
 from .base.BaseViewCase import BaseViewCase
 from .base.BaseViewFuzz import BaseViewFuzz
+from .base.BaseViewTask import BaseViewTask
 
 
 def index(request):
@@ -70,6 +75,10 @@ def module_del(request):
     m_id = request.POST["mid"]
     return BaseViewModule.module_del(m_id)
 
+
+@csrf_exempt
+def run(request):
+    return BaseViewModule.run(request.POST["mid"])
 
 # 模块下的用例列表
 def case(request, id):
@@ -156,7 +165,55 @@ def fuzz_del(request):
     return BaseViewFuzz.fuzz_del(fid)
 
 
+def task(request):
+    return BaseViewTask.task(request, "api/task.html")
+
+
 @csrf_exempt
-def run(request):
+def task_new(request):
+    name = request.POST["name"]
+    return BaseViewTask.task_new(name)
+
+
+@csrf_exempt
+def task_edit(request):
+    name = request.POST["name"]
+    id = request.POST["id"]
+    return BaseViewTask.task_edit({"name": name, "id": id})
+
+
+@csrf_exempt
+def task_del(request):
+    id = request.POST["id"]
+    return BaseViewTask.task_del(id)
+
+
+@csrf_exempt
+def task_run(request):
+    return BaseViewTask.task_run(request.POST["tid"])
+
+
+def task_module(request, id):
+    return BaseViewTaskModule.task_module(request, "api/taskModule.html", id)
+
+
+@csrf_exempt
+def task_module_new(request):
+    tid = request.POST["tid"]
     mid = request.POST["mid"]
-    return BaseViewModule.run(mid)
+    # name = request.POST.getlist("mid")
+    name = request.POST["name"]
+    return BaseViewTaskModule.task_module_new(tid, name, mid)
+
+
+@csrf_exempt
+def task_module_edit(request):
+    tmid = request.POST["tmid"]
+    mid = request.POST["mid"]
+    name = request.POST["name"]
+    return BaseViewTaskModule.task_module_edit({"tmid": tmid, "mid": mid, "name": name})
+
+
+@csrf_exempt
+def task_module_del(request):
+    return BaseViewTaskModule.task_module_del(request.POST["tmid"])

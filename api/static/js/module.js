@@ -10,33 +10,12 @@ var edit = 0 //0 表示为新建，1表示为编辑
          $("#name").val(name)
          validate(edit)
      });
+
      $(".btn-del").click(function () {
          id = $(this).parents("tr").attr("id")
          $("#modal-del").modal("show")
      })
-     $("#btn-run").click(function(){
-        $("#modal-operate").modal("show")
-         $.ajax({　　
-             url: 'run',
-             　　type: "post",
-             　　dataType: "json",
-             　　data: {　　　　
-                 "mid": $(this).parents("tr").attr("id")
-             },
-             　　success: function (data) {
-                    if (data["code"] == 0) {
-                        alert(data["msg"])
-                         location.reload()
-                    } else {
-                        alert(data["msg"])
-                    }
-             },
-             error: function (e) {
-                 alert("失败")
-//                 location.reload()
-             }
-         })
-     })
+
      $("#btn-modal-confirm").click(function () {
          $.ajax({　　
              url: 'module_del',

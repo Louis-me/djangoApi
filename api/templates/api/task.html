@@ -10,44 +10,44 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-                <li><a href="{% url 'index'  %}">DashBoard</a></li>
-                <li><a href="{% url 'login'  %}">登录</a></li>
-                <li><a href="{% url 'module'  %}" style="color:red">模块</a></li>
-                <li><a href="{% url 'task'  %}">任务</a></li>
+                <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a>
+                </li>
+                <li><a href="{% url 'index'  %}">DashBoard</a>
+                </li>
+                <li><a href="{% url 'login'  %}" >登录</a>
+                </li>
+                <li><a href="{% url 'module'  %}" >模块</a>
+                </li>
+                 <li><a href="{% url 'task'  %}"  style="color:red;">任务</a></li>
             </ul>
-
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-
-            <h1 class="page-header">模块</h1>
-             <button type="button" class="btn btn-primary" id="btn-module-new" data-toggle="modal" data-target="#modal-module">新建</button>
+             <h1 class="page-header">任务</h1>
+             <button type="button" class="btn btn-primary" id="btn-task-new">新建任务</button>
             <div class="table-responsive">
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th>模块名</th>
+                        <th>任务名</th>
                         <th>操作</th>
                     </tr>
                     </thead>
                     <tbody>
-                    {% if module_list %}
-                    {% for i in  module_list %}
+                    {% if task_list %}
+                    {% for i in  task_list %}
                     <tr id="{{i.id}}">
                         <td>{{i.name}}</td>
                         <td>
-                            <input type="button" class="btn btn-lg btn-primary btn-edit" value="编辑"  data-toggle="modal" data-target="#modal-module">
+                            <input type="button" class="btn btn-lg btn-primary btn-edit" value="编辑">
                             <input type="button"  class="btn btn-lg btn-primary btn-del" value="删除">
-                            <a  class="btn btn-lg btn-primary" href="{% url 'case' i.id %} "> 用例管理</a>
+                            <a  class="btn btn-lg btn-primary btn-module" href="{% url 'task_module'  i.id %}"> 关联模块</a>
+                            <button  class="btn btn-lg btn-primary btn-run"> 运行</button>
                         </td>
-
                     </tr>
                     {% endfor %}
-
                     {% else %}
                     <tr>
                         <td>无数据</td>
-
                     </tr>
                     {% endif %}
                     </tbody>
@@ -56,12 +56,11 @@
         </div>
     </div>
 </div>
-
 {% include 'api/del.html' %}
-{% include 'api/edit-module.html' %}
+{% include 'api/edit-task.html' %}
 {% include 'api/alert.html' %}
 {% include 'api/foot.html' %}
-<script src=" {% static 'js/module.js'%}"></script>
+<script src="{% static  'js/task.js' %}"></script>
 
 </body>
 </html>

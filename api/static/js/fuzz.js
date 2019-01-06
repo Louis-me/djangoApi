@@ -65,10 +65,10 @@ var id = 0
          hope = $(this).parents("td").prevAll(":eq(0)").text()
          $("#name").val(name)
          $("#sel-pro").val(pro)
-         $("#url").val(url)
+         $("#url").val($.trim(url))
          $("#sel-method").val(method)
-         $("#params").val(param)
-         $("#hope").val(hope)
+         $("#params").val($.trim(param))
+         $("#hope").val($.trim(hope))
          validate(edit)
      });
      $(".btn-del").click(function () {
@@ -142,11 +142,11 @@ var id = 0
              　　dataType: "json",
              　　data: {　　　　
                  "name": $("#name").val(),
-                 "url": $("#url").val(),
+                 "url":  $.trim($("#url").val()),
                  "method": $("#sel-method").val(),
                  "protocol":$("#sel-pro").val(),
-                 "params": $("#params").val(),
-                 "hope": $("#hope").val(),
+                 "params":  $.trim($("#params").val()),
+                 "hope":  $.trim($("#hope").val()),
                  "cid": $("#cid").val()
              },
              　　success: function (data) {
@@ -167,11 +167,11 @@ var id = 0
              　　dataType: "json",
              　　　data: {　　　　
                  "name": $("#name").val(),
-                 "url": $("#url").val(),
+                 "url":  $.trim($("#url").val()),
                  "method": $("#sel-method").val(),
                  "protocol":$("#sel-pro").val(),
-                 "params": $("#params").val(),
-                 "hope": $("#hope").val(),
+                 "params":  $.trim($("#params").val()),
+                 "hope":  $.trim($("#hope").val()),
                  "fid": id
              },
              　　success: function (data) {　　　　 //要执行的代码

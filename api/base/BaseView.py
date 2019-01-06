@@ -10,19 +10,21 @@ from api.base.BaseExcel import OperateReport
 from api.base.BaseFile import BaseFile
 from api.models import Login, Report
 
-
 '''
 登录
 '''
 
 
 def get_session():
-    req = requests.session()
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.0; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0'}
+
+    s = requests.session()
     l = Login.objects.get(pk=1)
     url = l.url
     data = json.loads(l.params)
-    req.post(url, data, verify=False)
-    return req
+    # s.post(url, data, verify=False)
+    s.post(url, data, headers=headers, verify=False)
+    return s
 
 
 '''
@@ -127,3 +129,4 @@ def write_excel(kw):
     worksheet2 = workbook.add_worksheet("测试详情")
     op_report.detail(worksheet2, kw["excel_detail"])
     op_report.close()
+

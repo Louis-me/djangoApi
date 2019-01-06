@@ -10,6 +10,7 @@ class OperateReport:
         self.wd = wd
 
     def init(self, worksheet, data):
+        self.__init_title(worksheet)
         self.__write_center(worksheet, "A3", '测试日期')
         self.__write_center(worksheet, "A4", '测试耗时')
         self.__write_center(worksheet, "A5", '用例总数')
