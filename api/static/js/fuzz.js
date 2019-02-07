@@ -2,6 +2,8 @@ var edit = 0 // 0 表示为新建，1表示为编辑
 var id = 0
 
  $(function () {
+     $("#nav-left ul li:eq(2) a").css("color", "red")
+
      function isJSON(str) {
         if (typeof str == 'string') {
             try {
@@ -17,7 +19,7 @@ var id = 0
             }
         }
     }
-    $("#btn-module-new").click(function(){
+    $("#btn-new").click(function(){
         $("#modal-case").modal("show")
         $("#url").val($("#curl").val())
         $("#name").val($("#cname").val())
@@ -25,6 +27,7 @@ var id = 0
          $("#sel-method").val($("#cmethod").val())
          $("#params").val($("#cparams").val())
          $("#hope").val($("#chope").val())
+         edit = 0
     })
     // 模糊生成用例
     $("#btn-fuzz-batch").click(function(){
@@ -33,25 +36,19 @@ var id = 0
             return
         }
         $("#modal-operate").modal("show")
-
-            $.ajax({　　
-             url: '../../../batch_fuzz',
-             　　type: "post",
-             　　dataType: "json",
-             　　data: {　　　　
-                 "cid": $("#cid").val()
-             },
-             　　success: function (data) {
-                 if (data["code"] == 0) {
+        $.rpc.req("../../../batch_fuzz","post",{"cid": $("#cid").val()},function(resp){
+            if (resp && resp["code"] == 0) {
+                    alert("成功")
                      location.reload()
-                 }
-             },
-             error: function (e) {
-                 alert("暂时只支持{}开头的json")
-                 location.reload()
-             }
+             } else {
+                     if (resp && resp["code"] ) {
+                         alert(resp.msg)
+                     } else {
+                        alert("请求失败")
+                     }
+                     location.reload()
+               }
          })
-
     })
      $(".btn-edit").click(function () {
          edit = 1
@@ -76,22 +73,18 @@ var id = 0
          $("#modal-del").modal("show")
      })
      $("#btn-modal-confirm").click(function () {
-         $.ajax({　　
-             url: '../../../fuzz_del',
-             　　type: "post",
-             　　dataType: "json",
-             　　data: {　　　　
-                 "fid": id
-             },
-             　　success: function (data) {
-                 if (data["code"] == 0) {
+        $.rpc.req("../../../fuzz_del","post",{"fid": id},function(resp){
+            if (resp && resp["code"] == 0) {
+                    alert("成功")
                      location.reload()
-                 }
-             },
-             error: function (e) {
-                 alert("失败")
-                 location.reload()
-             }
+             } else {
+                     if (resp && resp["code"] ) {
+                         alert(resp.msg)
+                     } else {
+                        alert("请求失败")
+                     }
+                     location.reload()
+               }
          })
      })
 
@@ -135,54 +128,53 @@ var id = 0
         alert("请填入期望值json")
         return
         }
-
-         $.ajax({　　
-             url: '../../../fuzz_new',
-             　　type: "post",
-             　　dataType: "json",
-             　　data: {　　　　
-                 "name": $("#name").val(),
-                 "url":  $.trim($("#url").val()),
-                 "method": $("#sel-method").val(),
-                 "protocol":$("#sel-pro").val(),
-                 "params":  $.trim($("#params").val()),
-                 "hope":  $.trim($("#hope").val()),
-                 "cid": $("#cid").val()
-             },
-             　　success: function (data) {
-                   alert("新建用例成功")
-                 location.reload()
-             },
-             error: function (e) {
-                 alert("失败")
-                 location.reload()
-             }
+        var data = {　　　　
+                     "name": $("#name").val(),
+                     "url":  $.trim($("#url").val()),
+                     "method": $("#sel-method").val(),
+                     "protocol":$("#sel-pro").val(),
+                     "params":  $.trim($("#params").val()),
+                     "hope":  $.trim($("#hope").val()),
+                     "cid": $("#cid").val()
+                    }
+         $.rpc.req("../../../fuzz_new",data,function(resp){
+            if (resp && resp["code"] == 0) {
+                    alert("成功")
+                     location.reload()
+             } else {
+                     if (resp && resp["code"] ) {
+                         alert(resp.msg)
+                     } else {
+                        alert("请求失败")
+                     }
+                     location.reload()
+               }
          })
      }
 
      function EditCase() {
-         $.ajax({　　
-             url: '../../../fuzz_edit',
-             　　type: "post",
-             　　dataType: "json",
-             　　　data: {　　　　
-                 "name": $("#name").val(),
-                 "url":  $.trim($("#url").val()),
-                 "method": $("#sel-method").val(),
-                 "protocol":$("#sel-pro").val(),
-                 "params":  $.trim($("#params").val()),
-                 "hope":  $.trim($("#hope").val()),
-                 "fid": id
-             },
-             　　success: function (data) {　　　　 //要执行的代码
-                  if (data["code"] == 0) {
-                       location.reload()
-                  }
-             },
-             error: function (e) {
-                 alert("失败")
-                 location.reload()
-             }
+          var data = {　　　　
+                     "name": $("#name").val(),
+                     "url":  $.trim($("#url").val()),
+                     "method": $("#sel-method").val(),
+                     "protocol":$("#sel-pro").val(),
+                     "params":  $.trim($("#params").val()),
+                     "hope":  $.trim($("#hope").val()),
+                     "cid": $("#cid").val(),
+                     "fid": id
+                    }
+         $.rpc.req("../../../fuzz_edit",data,function(resp){
+            if (resp && resp["code"] == 0) {
+                    alert("成功")
+                     location.reload()
+             } else {
+                     if (resp && resp["code"] ) {
+                         alert(resp.msg)
+                     } else {
+                        alert("请求失败")
+                     }
+                     location.reload()
+               }
          })
      }
  })

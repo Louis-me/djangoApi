@@ -8,16 +8,8 @@
 {% include 'api/nav-top.html' %}
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-                <li><a href="{% url 'index'  %}" style="color:red">DashBoard</a></li>
-                <li><a href="{% url 'login'  %}">登录</a></li>
-                <li><a href="{% url 'module'  %}">模块</a></li>
-                <li><a href="{% url 'task'  %}">任务</a></li>
-            </ul>
+        {% include 'api/nav-left.html' %}
 
-        </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h1 class="page-header">测试报告</h1>
             <div class="table-responsive">
@@ -46,7 +38,7 @@
                         <td>
                             <!--<input type="button" class="btn btn-lg btn-primary btn-edit" value="编辑"  data-toggle="modal" data-target="#modal-case">-->
                             <input type="button"  class="btn btn-lg btn-primary btn-del" value="删除">
-                            <a  class="btn btn-lg btn-primary" href="{% url 'report_detail' i.id %} "> 查看详情</a>
+                            <a  class="btn btn-lg btn-primary" href="{% url 'api:report_detail' i.id %} "> 查看详情</a>
                             <button  class="btn btn-lg btn-primary btn-log"  log="{{i.log}}"> 下载日志</button>
                             <button  class="btn btn-lg btn-primary btn-excel"  excel="{{i.report_path}}"> 下载报告</button>
                         </td>
@@ -89,6 +81,7 @@
 </div>
 {% include 'api/del.html' %}
 {% include 'api/foot.html' %}
+<script src=" {% static 'js/common.js'%}"></script>
 <script src=" {% static 'js/index.js'%}"></script>
 </body>
 </html>

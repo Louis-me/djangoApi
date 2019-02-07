@@ -6,26 +6,16 @@
 {% include 'api/nav-top.html' %}
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-                <li><a href="{% url 'index'  %}">DashBoard</a></li>
-                <li><a href="{% url 'login'  %}">登录</a></li>
-                <li><a href="{% url 'module'  %}" style="color:red">模块</a></li>
-                <li><a href="{% url 'task'  %}">任务</a></li>
-
-            </ul>
-
-        </div>
+              {% include 'api/nav-left.html' %}
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
              <ol class="breadcrumb">
-                  <li><a href="{% url 'module'  %}">模块</a></li>
-                  <li><a href="{% url 'case' mid %}">用例</a></li>
-                  <li><a href="{% url 'fuzz' mid case.id %} ">模糊用例</a></li>
+                  <li><a href="{% url 'api:module'  %}">模块</a></li>
+                  <li><a href="{% url 'api:case' mid %}">用例</a></li>
+                  <li><a href="{% url 'api:fuzz' mid case.id %} ">模糊用例</a></li>
                   <!--<li class="active">Data</li>-->
              </ol>
             <h1 class="page-header">{{case.name}}--模糊用例管理</h1>
-             <button type="button" class="btn btn-primary" id="btn-module-new">新建</button>
+             <button type="button" class="btn btn-primary" id="btn-new">新建</button>
              <button type="button" class="btn btn-primary" id="btn-fuzz-batch" >模糊生成</button>
             <input type="hidden" id="cid" value="{{case.id}}" />
             <input type="hidden" id="curl" value="{{case.url}}" />
@@ -79,6 +69,7 @@
 {% include 'api/edit-fuzz.html' %}
 {% include 'api/alert.html' %}
 {% include 'api/foot.html' %}
+<script src=" {% static 'js/common.js'%}"></script>
 <script src=" {% static 'js/fuzz.js'%}"></script>
 
 

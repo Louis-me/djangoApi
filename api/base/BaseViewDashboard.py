@@ -55,7 +55,7 @@ class BaseViewDashboard:
                         break
 
         file_name = os.path.join(settings.BASE_DIR, "api/Log", file_path + ".log")
-        http_file = "http://192.168.0.102:8001/api/Log/" + file_path + ".log"
+        http_file = "http://192.168.56.1:8001/api/Log/" + file_path + ".log"
         # 192.168.1.100:8001在apache中设置
         response = HttpResponse(file_iterator(file_name))
         response['Content-Type'] = 'application/octet-stream'
@@ -76,7 +76,7 @@ class BaseViewDashboard:
                         break
 
         file_name1 = os.path.join(settings.BASE_DIR, "api/Report", file_path + ".xlsx")
-        http_file = "http://192.168.0.102:8001/api/Report/" + file_path + ".xlsx"
+        http_file = "http://192.168.56.1:8001/api/Report/" + file_path + ".xlsx"
         response = HttpResponse(file_iterator(file_name1))
         response['Content-Type'] = 'application/octet-stream'
         response['Content-Disposition'] = 'attachment;filename="{0}"'.format("report.xlsx")

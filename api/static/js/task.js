@@ -2,6 +2,7 @@ var edit = 0 // 0 表示为新建，1表示为编辑
 var id = 0 // 任务id
 $(function(){
 
+    $("#nav-left ul li:eq(4) a").css("color", "red")
 
     $("#btn-task-new").click(function(){
         $("#modal-task").modal("show")
@@ -20,21 +21,18 @@ $(function(){
      })
 
      $("#btn-modal-confirm").click(function () {
-         $.ajax({　　
-             url: 'task_del',
-             　　type: "post",
-             　　dataType: "json",
-             　　data: {　　　　
-                 "id": id
-             },
-             　　success: function (data) {　　　　
-                alert(data["msg"])
-                 location.reload()
-             },
-             error: function (e) {
-                 alert("失败")
-                 location.reload()
-             }
+        $.rpc.req("task_del","post",{"id": id},function(resp){
+            if (resp && resp["code"] == 0) {
+                    alert("成功")
+                     location.reload()
+             } else {
+                     if (resp && resp["code"] ) {
+                         alert(resp.msg)
+                     } else {
+                        alert("请求失败")
+                     }
+                     location.reload()
+               }
          })
      })
     validate()
@@ -42,64 +40,51 @@ $(function(){
 
     $(".btn-run").click(function(){
         $("#modal-operate").modal("show")
-         $.ajax({　　
-             url: 'task_run',
-             　　type: "post",
-             　　dataType: "json",
-             　　data: {　　　　
-                 "tid": $(this).parents("tr").attr("id")
-             },
-             　　success: function (data) {
-                    if (data["code"] == 0) {
-                        alert(data["msg"])
-                         location.reload()
-                    } else {
-                        alert(data["msg"])
-                    }
-             },
-                 error: function (e) {
-                     alert("失败")
+         $.rpc.req("task_run","post",{"tid": $(this).parents("tr").attr("id")},function(resp){
+            if (resp && resp["code"] == 0) {
+                    alert("成功")
                      location.reload()
-                 }
-            })
+             } else {
+                     if (resp && resp["code"] ) {
+                         alert(resp.msg)
+                     } else {
+                        alert("请求失败")
+                     }
+                     location.reload()
+               }
+         })
     })
 
     function NewTask() {
-       $.ajax({　　
-                url: 'task_new',
-             　　type: "post",
-             　　dataType: "json",
-             　　data: {　　　　
-                 "name": $("#name").val(),
-                 },
-             　　success: function (data) {
-                   alert("新建成功")
-                 location.reload()
-                 },
-                 error: function (e) {
-                     alert("失败")
+        $.rpc.req("task_new","post",{"name":$("#name").val()},function(resp){
+            if (resp && resp["code"] == 0) {
+                    alert("成功")
                      location.reload()
-                 }
-             })
+             } else {
+                     if (resp && resp["code"] ) {
+                         alert(resp.msg)
+                     } else {
+                        alert("请求失败")
+                     }
+                     location.reload()
+               }
+        })
     }
     function EditTask() {
-       $.ajax({　　
-             url: 'task_edit',
-             　　type: "post",
-             　　dataType: "json",
-             　　data: {　　　　
-                 "name": $("#name").val(),
-                 "id": id
-             },
-             　　success: function (data) {
-                   alert("编辑成功")
-                    location.reload()
-             },
-             error: function (e) {
-                 alert("失败")
-                 location.reload()
-             }
-         })
+        var data = {"name": $("#name").val(), "id": id}
+        $.rpc.req("task_edit","post",data,function(resp){
+            if (resp && resp["code"] == 0) {
+                    alert("成功")
+                     location.reload()
+             } else {
+                     if (resp && resp["code"] ) {
+                         alert(resp.msg)
+                     } else {
+                        alert("请求失败")
+                     }
+                     location.reload()
+               }
+        })
     }
 
    function validate() {

@@ -1,0 +1,72 @@
+<div class="modal fade " id="modal-login">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">操作用例</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form" id="m-form">
+                   <div class="form-group">
+                       <label class="col-sm-2 control-label">用例名</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="name" id="name" class="form-control"  />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">元素</label>
+                        <div class="col-sm-8">
+                            <textarea  name="element_info" id="element_info" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">查找类型</label>
+                        <div class="col-sm-8">
+                            <select id="find_type">
+                                <option value="id">id</option>
+                                <option value="xpath">xpath</option>
+                                <option value="css">css</option>
+                                <option value="by_name">by_name</option>
+                                <option value="class_name">class_name</option>
+                                <option value="0">无操作</option>
+                            </select>
+                        </div>
+                    </div>
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label">查找类型</label>
+                        <div class="col-sm-8">
+                            <select id="operate_type">
+                                <option value="click">click</option>
+                                <option value="send_keys">send_keys</option>
+                                <option value="switch_to_window">switch_to_window</option>
+                                <option value="switch_to_frame">switch_to_frame</option>
+                                <option value="switch_to_default_content">switch_to_default_content</option>
+                                <option value="0">无操作</option>
+                            </select>
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <label class="col-sm-2 control-label">扩展</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="extend" id="extend" class="form-control"  />
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <label class="col-sm-2 control-label">排序</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="sort" id="sort" class="form-control"  />
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-left:100px;">
+                        <button type="submit" class="btn btn-default btn-modal-new">确定</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">取消
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -8,19 +8,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a>
-                </li>
-                <li><a href="{% url 'index'  %}">DashBoard</a>
-                </li>
-                <li><a href="{% url 'login'  %}" >登录</a>
-                </li>
-                <li><a href="{% url 'module'  %}" >模块</a>
-                </li>
-                 <li><a href="{% url 'task'  %}"  style="color:red;">任务</a></li>
-            </ul>
-        </div>
+            {% include 'api/nav-left.html' %}
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
              <h1 class="page-header">任务</h1>
              <button type="button" class="btn btn-primary" id="btn-task-new">新建任务</button>
@@ -40,7 +28,7 @@
                         <td>
                             <input type="button" class="btn btn-lg btn-primary btn-edit" value="编辑">
                             <input type="button"  class="btn btn-lg btn-primary btn-del" value="删除">
-                            <a  class="btn btn-lg btn-primary btn-module" href="{% url 'task_module'  i.id %}"> 关联模块</a>
+                            <a  class="btn btn-lg btn-primary btn-module" href="{% url 'api:task_module'  i.id %}"> 关联模块</a>
                             <button  class="btn btn-lg btn-primary btn-run"> 运行</button>
                         </td>
                     </tr>
@@ -60,6 +48,7 @@
 {% include 'api/edit-task.html' %}
 {% include 'api/alert.html' %}
 {% include 'api/foot.html' %}
+<script src="{% static  'js/common.js' %}"></script>
 <script src="{% static  'js/task.js' %}"></script>
 
 </body>

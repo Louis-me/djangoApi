@@ -1,8 +1,7 @@
 var edit = 0 // 0 表示为新建，1表示为编辑
 var id = 0 // 关联的模块id
 $(function(){
-
-
+    $("#nav-left ul li:eq(3) a").css("color", "red")
     $("#btn-task-new-module").click(function(){
         $("#modal-task-module").modal("show")
         edit = 0
@@ -21,62 +20,59 @@ $(function(){
      })
 
      $("#btn-modal-confirm").click(function () {
-         $.ajax({　　
-             url: '../../task_del',
-             　　type: "post",
-             　　dataType: "json",
-             　　data: {　　　　
-                 "tmid": id
-             },
-             　　success: function (data) {　　　　
-                alert(data["msg"])
-                 location.reload()
-             },
-             error: function (e) {
-                 alert("失败")
-                 location.reload()
-             }
+        $.rpc.req("../../task_module_del","post",{"tmid": id},function(resp){
+            if (resp && resp["code"] == 0) {
+                    alert("成功")
+                     location.reload()
+             } else {
+                     if (resp && resp["code"] ) {
+                         alert(resp.msg)
+                     } else {
+                        alert("请求失败")
+                     }
+                     location.reload()
+               }
          })
      })
 
     function NewTaskModule() {
-       $.ajax({　　
-                url: '../../task_module_new',
-             　　type: "post",
-             　　dataType: "json",
-             　　data: {　　　　
+        var data = {　　　　
                  "name": $("#sel-module").find("option:selected").text(),
                  "mid": $("#sel-module").val(),
                  "tid": $("#tid").val()
-                 },
-             　　success: function (data) {
-                   alert("新建成功")
-                 location.reload()
-                 },
-                 error: function (e) {
-                     alert("失败")
-                     location.reload()
                  }
-             })
+         $.rpc.req("../../task_module_new","post",data,function(resp){
+            if (resp && resp["code"] == 0) {
+                    alert("成功")
+                     location.reload()
+             } else {
+                     if (resp && resp["code"] ) {
+                         alert(resp.msg)
+                     } else {
+                        alert("请求失败")
+                     }
+                     location.reload()
+               }
+         })
     }
     function EditTaskModule() {
-       $.ajax({　　
-             url: '../../task_module_edit',
-             　　type: "post",
-             　　dataType: "json",
-             　　data: {　　　　
-                 "name": $("#sel-module").find("option:selected").text(),
+         var data = {　　　　
+                  "name": $("#sel-module").find("option:selected").text(),
                  "tmid": id,
-                  "mid": $("#sel-module").val(),
-             },
-             　　success: function (data) {
-                   alert("编辑成功")
-                    location.reload()
-             },
-             error: function (e) {
-                 alert("失败")
-                 location.reload()
-             }
+                  "mid": $("#sel-module").val()
+                 }
+         $.rpc.req("../../task_module_edit","post",data,function(resp){
+            if (resp && resp["code"] == 0) {
+                    alert("成功")
+                     location.reload()
+             } else {
+                     if (resp && resp["code"] ) {
+                         alert(resp.msg)
+                     } else {
+                        alert("请求失败")
+                     }
+                     location.reload()
+               }
          })
     }
 

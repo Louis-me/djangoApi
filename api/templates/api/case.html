@@ -1,77 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
+
 {% include 'api/header.html' %}
 <body>
-{% include 'api/nav-top.html' %}
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-                <li><a href="{% url 'index'  %}">DashBoard</a></li>
-                <li><a href="{% url 'login'  %}">登录</a></li>
-                <li><a href="{% url 'module'  %}"  style="color:red">模块</a></li>
-                <li><a href="{% url 'task'  %}">任务</a></li>
-
-            </ul>
-        </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <ol class="breadcrumb">
-                  <li><a href="{% url 'module'  %}">模块</a></li>
-                  <li><a href="{% url 'case' mid %}">用例</a></li>
-                  <!--<li class="active">Data</li>-->
-            </ol>
-            <h1 class="page-header">{{name}}--用例管理</h1>
-             <button type="button" class="btn btn-primary" id="btn-module-new" data-toggle="modal" data-target="#modal-case">新建</button>
-            <input type="hidden" id="mid" value="{{mid}}" />
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th>用例名称</th>
-                        <th>协议</th>
-                        <th>url</th>
-                        <th>方法</th>
-                        <th>入参</th>
-                        <th>期望值</th>
-                        <th>操作</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {% if case_list %}
-                    {% for i in  case_list %}
-                    <tr id="{{i.id}}">
-                        <td>{{i.name}}</td>
-                        <td>{{i.protocol}}</td>
-                        <td>{{i.url}}</td>
-                        <td>{{i.method}}</td>
-                        <td class="break-word-w300">{{i.params}}</td>
-                        <td>{{i.hope}}</td>
-                        <td>
-                            <input type="button" class="btn btn-lg btn-primary btn-edit" value="编辑"  data-toggle="modal" data-target="#modal-case">
-                            <input type="button"  class="btn btn-lg btn-primary btn-del" value="删除">
-                            <a  class="btn btn-lg btn-primary" href="{% url 'fuzz' mid i.id %} "> 模糊用例</a>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                    {% else %}
-                    <tr>
-                        <td>无数据</td>
-                    </tr>
-                    {% endif %}
-                    </tbody>
-                </table>
+    {% include 'api/nav-top.html' %}
+    <div class="container-fluid">
+        <div class="row">
+            {% include 'api/nav-left.html' %}
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <ol class="breadcrumb">
+                      <li><a href="{% url 'api:module'  %}">模块</a></li>
+                      <li><a href="{% url 'api:case' mid %}">用例</a></li>
+                </ol>
+                <h1 class="page-header">{{name}}--用例管理</h1>
+                <button type="button" class="btn btn-primary" id="btn-module-new" data-toggle="modal" data-target="#modal-case">新建</button>
+                <input type="hidden" id="mid" value="{{mid}}" />
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>用例名称</th>
+                                <th>协议</th>
+                                <th>url</th>
+                                <th>方法</th>
+                                <th>入参</th>
+                                <th>期望值</th>
+                                <th>操作</th>
+                            </tr>
+                                <td>{{i.url}}</td>
+                        </thead>
+                        <tbody>
+                            {% if case_list %}
+                            {% for i in  case_list %}
+                            <tr id="{{i.id}}">
+                                <td>{{i.name}}</td>
+                                <td>{{i.protocol}}</td>
+                                <td>{{i.url}}</td>
+                                <td>{{i.method}}</td>
+                                <td class="break-word-w300">{{i.params}}</td>
+                                <td>{{i.hope}}</td>
+                                <td>
+                                    <input type="button" class="btn btn-lg btn-primary btn-edit" value="编辑"  data-toggle="modal" data-target="#modal-case">
+                                    <input type="button"  class="btn btn-lg btn-primary btn-del" value="删除">
+                                    <a  class="btn btn-lg btn-primary" href="{% url 'api:fuzz' mid i.id %} "> 模糊用例</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                            {% else %}
+                            <tr>
+                                <td>无数据</td>
+                            </tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
 {% include 'api/del.html' %}
 {% include 'api/edit-case.html' %}
 {% include 'api/foot.html' %}
 <script src=" {% static 'js/case.js'%}"></script>
-
 </body>
 </html>

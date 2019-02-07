@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load pagetag %}
+{% include 'ui/header.html' %}
+
+<body>
+{% include 'ui/nav-top.html' %}
+<div class="container-fluid">
+    <div class="row">
+       {% include 'ui/nav-left.html' %}
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">测试报告</h1>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>名字</th>
+                        <th>开始时间</th>
+                        <th>耗时</th>
+                        <th>通过</th>
+                        <th>失败</th>
+                        <th>未检测</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% if list_report %}
+                    {% for i in  list_report %}
+                    <tr id="{{i.id}}">
+                        <td>{{i.name}}</td>
+                        <td>{{i.start_time}}</td>
+                        <td>{{i.sum_time}}</td>
+                        <td>{{i.passed}}</td>
+                        <td>{{i.failed}}</td>
+                        <td>{{i.no_check}}</td>
+                        <td>
+                            <input type="button"  class="btn btn-lg btn-primary btn-del" value="删除">
+                            <a  class="btn btn-lg btn-primary" href="{% url 'ui:report_detail' i.id %} "> 查看详情</a>
+                            <button  class="btn btn-lg btn-primary btn-log"  log="{{i.log}}"> 下载日志</button>
+                            <button  class="btn btn-lg btn-primary btn-excel"  excel="{{i.report_path}}"> 下载报告</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    {% else %}
+                    <tr>
+                        <td>无数据</td>
+                    </tr>
+                    {% endif %}
+                    </tbody>
+                </table>
+            </div>
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    {% if list_report.has_previous %}
+                    <li>
+                        <a href="?page={{ list_report.previous_page_number }}" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    {% endif %}
+
+                    {%  for pg in list_report.paginator.page_range %}
+                    {% circle_page list_report.number pg %}
+                    {% endfor %}
+
+                    {% if list_report.has_next %}
+                    <li>
+                        <a href="?page={{ list_report.next_page_number }}" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+</div>
+{% include 'ui/del.html' %}
+{% include 'ui/foot.html' %}
+<script src=" {% static 'js/index1.js'%}"></script>
+</body>
+</html>

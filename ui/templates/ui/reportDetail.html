@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% include 'ui/header.html' %}
+<body>
+{% include 'ui/nav-top.html' %}
+
+<div class="container-fluid">
+    <div class="row">
+           {% include 'ui/nav-left.html' %}
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">{{name}}--测试报告</h1>
+            <ol class="breadcrumb">
+                  <li><a href="/ui">DashBoard</a></li>
+                  <li><a href="{% url 'ui:report_detail' id %}">报告详情</a></li>
+                  <!--<li class="active">Data</li>-->
+             </ol>
+            <div class="table-responsive">
+             <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>用例名</th>
+                        <th>操作步骤</th>
+                        <th>检查步骤</th>
+                        <th>耗时</th>
+                        <th>是否通过</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% if case_list %}
+                    {% for i in  case_list %}
+                    <tr id="{{i.id}}">
+                        <td>{{i.name}}</td>
+                        <td class="break-word-w200">{{i.step}}</td>
+                        <td class="break-word-w200">{{i.hope}}</td>
+                        <td>{{i.sum_time}}</td>
+                          {% if i.result == 0 %}
+                          <td>通过</td>
+                         {% elif i.result == -1 %}
+                             <td>失败</td>
+                         {% else %}
+                           <td>未检测</td>
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+                    {% else %}
+                    <tr>
+                        <td>无数据</td>
+                    </tr>
+                    {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'ui/foot.html' %}
+</body>
+</html>

@@ -7,20 +7,12 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-                <li><a href="{% url 'index'  %}">DashBoard</a></li>
-                <li><a href="{% url 'login'  %}">登录</a></li>
-                <li><a href="{% url 'module'  %}">模块</a></li>
-            </ul>
-
-        </div>
+          {% include 'api/nav-left.html' %}
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h1 class="page-header">{{name}}--测试报告</h1>
             <ol class="breadcrumb">
-                  <li><a href="{% url 'index'  %}">DashBoard</a></li>
-                  <li><a href="{% url 'report_detail' id %}">报告详情</a></li>
+                  <li><a href="{% url 'api:index'  %}">DashBoard</a></li>
+                  <li><a href="{% url 'api:report_detail' id %}">报告详情</a></li>
                   <!--<li class="active">Data</li>-->
              </ol>
             <div class="table-responsive">
@@ -72,5 +64,7 @@
     </div>
 </div>
 {% include 'api/foot.html' %}
+<script src="{% static  'js/detail.js' %}"></script>
+
 </body>
 </html>

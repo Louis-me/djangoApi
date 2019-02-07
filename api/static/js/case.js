@@ -2,6 +2,8 @@ var edit = 0 // 0 表示为新建，1表示为编辑
 var id = 0
 
  $(function () {
+     $("#nav-left ul li:eq(2) a").css("color", "red")
+
      function isJSON(str) {
         if (typeof str == 'string') {
             try {

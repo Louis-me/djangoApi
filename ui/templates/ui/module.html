@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% include 'ui/header.html' %}
+
+<body>
+{% include 'ui/nav-top.html' %}
+
+<div class="container-fluid">
+    <div class="row">
+             {% include 'ui/nav-left.html' %}
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">模块</h1>
+             <button type="button" class="btn btn-primary" id="btn-new" data-toggle="modal" data-target="#modal-module">新建</button>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>模块名</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% if module_list %}
+                    {% for i in  module_list %}
+                    <tr id="{{i.id}}">
+                        <td>{{i.name}}</td>
+                        <td>
+                            <input type="button" class="btn btn-lg btn-primary btn-edit" value="编辑"  data-toggle="modal" data-target="#modal-module">
+                            <input type="button"  class="btn btn-lg btn-primary btn-del" value="删除">
+                            <a  class="btn btn-lg btn-primary" href="{% url 'ui:case' i.id %} "> 用例管理</a>
+                        </td>
+
+                    </tr>
+                    {% endfor %}
+
+                    {% else %}
+                    <tr>
+                        <td>无数据</td>
+
+                    </tr>
+                    {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'ui/del.html' %}
+{% include 'ui/edit-module.html' %}
+{% include 'ui/alert.html' %}
+{% include 'ui/foot.html' %}
+<script src=" {% static 'js/common1.js'%}"></script>
+<script src=" {% static 'js/module1.js'%}"></script>
+
+</body>
+</html>

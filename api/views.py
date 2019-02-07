@@ -1,7 +1,4 @@
-from django.http import HttpResponse
-from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
-
 from api.base.BaseViewTaskModule import BaseViewTaskModule
 from .base.BaseViewDashboard import BaseViewDashboard
 from .base.BaseViewLogin import BaseViewLogin
