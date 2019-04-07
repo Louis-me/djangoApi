@@ -39,20 +39,24 @@ $(function(){
 
 
     $(".btn-run").click(function(){
-        $("#modal-operate").modal("show")
+//        $("#modal-operate").modal("show")
+        $(this).attr("disabled", "true")
+        $(this).text("测试中")
          $.rpc.req("task_run","post",{"tid": $(this).parents("tr").attr("id")},function(resp){
-            if (resp && resp["code"] == 0) {
-                    alert("成功")
-                     location.reload()
-             } else {
-                     if (resp && resp["code"] ) {
-                         alert(resp.msg)
-                     } else {
-                        alert("请求失败")
-                     }
-                     location.reload()
-               }
+//            if (resp && resp["code"] == 0) {
+//                    alert("成功")
+//                     location.reload()
+//             } else {
+//                     if (resp && resp["code"] ) {
+//                         alert(resp.msg)
+//                     } else {
+//                        alert("请求失败")
+//                     }
+//                     location.reload()
+//               }
          })
+         alert("提交成功")
+//          location.reload()
     })
 
     function NewTask() {

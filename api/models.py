@@ -75,7 +75,7 @@ class FuzzCase(models.Model):
 
 class Task(models.Model):
     name = models.CharField(max_length=100, default="")
-
+    extend = models.IntegerField(default=0) # 0没有在测试，1测试中，2测试完成
 
 # 关联任务和模块
 class TaskModule(models.Model):

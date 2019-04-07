@@ -1,9 +1,14 @@
+from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+
+from api import tasks
 from api.base.BaseViewTaskModule import BaseViewTaskModule
 from .base.BaseViewDashboard import BaseViewDashboard
 from .base.BaseViewLogin import BaseViewLogin
 from .base.BaseViewModule import BaseViewModule
 from .base.BaseViewCase import BaseViewCase
+from .base import BaseViewTask as bc
+
 from .base.BaseViewFuzz import BaseViewFuzz
 from .base.BaseViewTask import BaseViewTask
 
@@ -72,10 +77,6 @@ def module_del(request):
     m_id = request.POST["mid"]
     return BaseViewModule.module_del(m_id)
 
-
-@csrf_exempt
-def run(request):
-    return BaseViewModule.run(request.POST["mid"])
 
 # 模块下的用例列表
 def case(request, id):
@@ -163,7 +164,7 @@ def fuzz_del(request):
 
 
 def task(request):
-    return BaseViewTask.task(request, "api/task.html")
+    return BaseViewTask.tasks(request, "api/task.html")
 
 
 @csrf_exempt
@@ -187,8 +188,14 @@ def task_del(request):
 
 @csrf_exempt
 def task_run(request):
-    return BaseViewTask.task_run(request.POST["tid"])
+    bc.task_run.delay(request.POST["tid"])
+    result = {'code': 0, 'msg': '这是一个后台任务'}
+    return JsonResponse(result)
 
+def add(request,*args,**kwargs):
+    tasks.add.delay(1,2)
+    result = {'code': 0, 'msg': '这是一个后台任务'}
+    return JsonResponse(result)
 
 def task_module(request, id):
     return BaseViewTaskModule.task_module(request, "api/taskModule.html", id)

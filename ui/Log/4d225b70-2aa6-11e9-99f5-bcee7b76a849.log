@@ -1,0 +1,64 @@
+2019-02-07 15:02:23,170  - INFO - ----  登录_user_login_id_send_keys_XXXX        ----
+2019-02-07 15:02:23,300  - INFO - ----  登录_user_password_id_send_keys_XXXXX        ----
+2019-02-07 15:02:23,416  - INFO - ----  登录_commit_by_name_click_time        ----
+2019-02-07 15:02:30,637  - INFO - ----  ==请检查dropdown-avatar==        ----
+2019-02-07 15:02:30,637  - INFO - ----  检查点=失败   END     ----
+2019-02-07 15:02:30,637  - INFO - [CheckPoint_1]: 其他话题详情	: NG
+2019-02-07 15:02:35,676  - ERROR - Internal Server Error: /ui/task_run
+Traceback (most recent call last):
+  File "E:\app\Python35\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "E:\app\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\app\Python35\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\app\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\demo\djangoApi\ui\views.py", line 246, in task_run
+    return BaseViewTask.task_run(request.POST["tid"])
+  File "E:\app\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\demo\djangoApi\ui\base\BaseViewTask.py", line 116, in task_run
+    app["img"] = base_log.check_point_ng(driver, c.name, str(uuid.uuid1()))
+  File "E:\demo\djangoApi\ui\base\BaseLog.py", line 86, in check_point_ng
+    return self.screenshot_ng(driver, uid)
+  File "E:\demo\djangoApi\ui\base\BaseLog.py", line 97, in screenshot_ng
+    driver.get_screenshot_as_file(name)
+  File "E:\app\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1032, in get_screenshot_as_file
+    png = self.get_screenshot_as_png()
+  File "E:\app\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1064, in get_screenshot_as_png
+    return base64.b64decode(self.get_screenshot_as_base64().encode('ascii'))
+  File "E:\app\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1074, in get_screenshot_as_base64
+    return self.execute(Command.SCREENSHOT)['value']
+  File "E:\app\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\app\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: chrome not reachable
+  (Session info: chrome=70.0.3538.102)
+  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64)
+
+2019-02-07 15:03:20,985  - INFO - ----  登录_user_login_id_send_keys_lose        ----
+2019-02-07 15:03:21,086  - INFO - ----  登录_user_password_id_send_keys_shikun1988        ----
+2019-02-07 15:03:21,195  - INFO - ----  登录_commit_by_name_click_time        ----
+2019-02-07 15:03:22,711  - INFO - ----  其他话题详情	_dropdown-avatar_class_name_click_        ----
+2019-02-07 15:03:22,795  - INFO - ----  其他话题详情	_//ul[@class='dropdown-menu']/li/a[contains(text(),'lose')]_xpath_click_        ----
+2019-02-07 15:03:23,398  - INFO - ----  其他话题详情	_//*[@id="main"]/div/div[2]/ul/li[3]_xpath_click_        ----
+2019-02-07 15:03:24,033  - INFO - ----  其他话题详情	_//table/tbody/tr[2]_xpath_click_        ----
+2019-02-07 15:03:24,655  - INFO - ----  其他话题详情	_//*[@id="main"]//span[contains(text(),'126 邮箱退出后 url 出现异常信息')]_xpath_0_        ----
+2019-02-07 15:03:24,655  - INFO - ----  检查点=通过   END     ----
+2019-02-07 15:03:24,655  - INFO - [CheckPoint_1]: 其他话题详情	: OK
+2019-02-07 15:03:25,069  - INFO - ----  个人话题详情_dropdown-avatar_class_name_click_        ----
+2019-02-07 15:03:25,160  - INFO - ----  个人话题详情_//ul[@class='dropdown-menu']/li/a[contains(text(),'lose')]_xpath_click_        ----
+2019-02-07 15:03:25,760  - INFO - ----  个人话题详情_//*[@id="main"]/div/div[2]/ul/li[3]_xpath_click_        ----
+2019-02-07 15:03:26,385  - INFO - ----  个人话题详情_//table/tbody/tr[2]_xpath_click_        ----
+2019-02-07 15:03:26,993  - INFO - ----  个人话题详情_//*[@id="main"]//span[contains(text(),'126 邮箱退出后 url 出现异常信息')]_xpath_0_        ----
+2019-02-07 15:03:26,993  - INFO - ----  检查点=通过   END     ----
+2019-02-07 15:03:26,994  - INFO - [CheckPoint_2]: 个人话题详情: OK
+2019-02-07 15:03:27,428  - INFO - ----  个人资料设置_dropdown-avatar_class_name_click_        ----
+2019-02-07 15:03:27,503  - INFO - ----  个人资料设置_//*[@class="dropdown-menu"]/li[3]_xpath_click_        ----
+2019-02-07 15:03:28,119  - INFO - ----  个人资料设置_user_bio_id_send_keys_这是测试信息        ----
+2019-02-07 15:03:28,219  - INFO - ----  个人资料设置_//*[@class="btn btn-lg btn-primary"]_xpath_click_        ----
+2019-02-07 15:03:28,669  - INFO - ----  个人资料设置_#main > div.alert.alert-success_css_0_        ----
+2019-02-07 15:03:28,669  - INFO - ----  检查点=通过   END     ----
+2019-02-07 15:03:28,669  - INFO - [CheckPoint_3]: 个人资料设置: OK
