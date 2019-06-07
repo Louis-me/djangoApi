@@ -3,41 +3,57 @@ from django.views.decorators.csrf import csrf_exempt
 
 from api import tasks
 from api.base.BaseViewTaskModule import BaseViewTaskModule
-from .base.BaseViewDashboard import BaseViewDashboard
+from .base.BaseReport import BaseReport
 from .base.BaseViewLogin import BaseViewLogin
 from .base.BaseViewModule import BaseViewModule
 from .base.BaseViewCase import BaseViewCase
 from .base import BaseViewTask as bc
-
+from .base.BaseViewDashBoard import BaseViewDashBoard
 from .base.BaseViewFuzz import BaseViewFuzz
 from .base.BaseViewTask import BaseViewTask
 
 
+def dashBoard(request):
+    return BaseViewDashBoard.dashBoard(request, "api/dashBoard.html")
+
+
+def dashBoard_module_case(request):
+    return BaseViewDashBoard.dashBoard_module_case(request)
+
+
+def dashBoard_top10_task(request):
+    return BaseViewDashBoard.dashBoard_top10_task(request)
+
+
+def dashBoard_top100_case_time(request):
+    return BaseViewDashBoard.dashBoard_top100_case_time(request)
+
+
 def index(request):
     page = request.GET.get('page')
-    return BaseViewDashboard.index(request, page, "api/index.html")
+    return BaseReport.index(request, page, "api/index.html")
 
 
 @csrf_exempt
 def report_del(request):
-    return BaseViewDashboard.report_del(request.POST["rid"])
+    return BaseReport.report_del(request.POST["rid"])
 
 
 # 测试模块的用例列表接口
 def report_detail(request, id):
-    return BaseViewDashboard.report_detail(request, "api/reportDetail.html", id)
+    return BaseReport.report_detail(request, "api/reportDetail.html", id)
 
 
 # 下载日志
 @csrf_exempt
 def download_log(request):
-    return BaseViewDashboard.download_log(request.POST["log"])
+    return BaseReport.download_log(request.POST["log"])
 
 
 # 下载excel
 @csrf_exempt
 def download_excel(request):
-    return BaseViewDashboard.download_excel(request.POST["excel"])
+    return BaseReport.download_excel(request.POST["excel"])
 
 
 # 接口测试需要登录
@@ -192,10 +208,12 @@ def task_run(request):
     result = {'code': 0, 'msg': '这是一个后台任务'}
     return JsonResponse(result)
 
-def add(request,*args,**kwargs):
-    tasks.add.delay(1,2)
+
+def add(request, *args, **kwargs):
+    tasks.add.delay(1, 2)
     result = {'code': 0, 'msg': '这是一个后台任务'}
     return JsonResponse(result)
+
 
 def task_module(request, id):
     return BaseViewTaskModule.task_module(request, "api/taskModule.html", id)

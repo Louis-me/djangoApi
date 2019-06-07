@@ -1,8 +1,9 @@
+# -*- coding=utf-8 -*-
+__author__ = 'shikun'
+__CreateAt__ = '2019/6/7-13:07'
 import logging
-import time
 import os
 from time import sleep
-import threading
 
 PATH = lambda p: os.path.abspath(
     os.path.join(os.path.dirname(__file__), p)

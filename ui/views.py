@@ -1,3 +1,6 @@
+# -*- coding=utf-8 -*-
+__author__ = 'shikun'
+__CreateAt__ = '2019/6/7-13:07'
 from django.views.decorators.csrf import csrf_exempt
 from ui.base.BaseViewTaskModule import BaseViewTaskModule
 from .base.BaseViewDashboard import BaseViewDashboard

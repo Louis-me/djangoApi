@@ -1,7 +1,8 @@
 <div class="col-sm-3 col-md-2 sidebar" id="nav-left">
     <ul class="nav nav-sidebar">
         <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-        <li><a href="/api">DashBoard</a></li>
+        <li><a href="/api">测试报告</a></li>
+        <li><a href="{% url 'api:dashBoard'  %}">DashBoard</a></li>
         <li><a href="{% url 'api:login'  %}">登录</a></li>
         <li><a href="{% url 'api:module'  %}">模块</a></li>
         <li><a href="{% url 'api:task'  %}">任务</a></li>

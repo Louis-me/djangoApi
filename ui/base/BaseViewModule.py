@@ -1,21 +1,12 @@
-import ast
+# -*- coding=utf-8 -*-
+__author__ = 'shikun'
+__CreateAt__ = '2019/6/7-13:07'
 from django.http import JsonResponse
 from django.http import HttpResponse
 from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
-from ..models import Module
-
-from api.base.BaseElementEnmu import Element
-from api.base.BaseView import new_report_item, edit_report, write_excel, get_session, new_report, _check
 from ..models import Module, Case
-import json
-import time
-from datetime import datetime
-import uuid
-from ..base import BaseLog
-import sys
-import io
-# sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf8') #改变标准输出的默认编码
+
 
 class BaseViewModule:
 

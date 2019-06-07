@@ -7,19 +7,46 @@
     <list default="true" id="e35508a1-1acd-45e3-b99e-370013e083e6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/base/BaseElementEnmu.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/base/BaseElementEnmu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/base/BaseExcel.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/base/BaseExcel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/base/BaseView.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/base/BaseView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/base/BaseViewDashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/base/BaseReport.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/base/BaseViewFuzz.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/base/BaseViewFuzz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/base/BaseViewLogin.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/base/BaseViewLogin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/base/BaseViewModule.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/base/BaseViewModule.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/base/BaseViewTask.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/base/BaseViewTask.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/base/BaseViewTaskModule.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/base/BaseViewTaskModule.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/js/case.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/static/js/case.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/js/fuzz.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/static/js/fuzz.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/static/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/js/module.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/static/js/module.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/static/js/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/static/js/task.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/templates/api/task.html" beforeDir="false" afterPath="$PROJECT_DIR$/api/templates/api/task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/static/js/taskModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/static/js/taskModule.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/templates/api/nav-left.html" beforeDir="false" afterPath="$PROJECT_DIR$/api/templates/api/nav-left.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoApi/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoApi/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoApi/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoApi/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/Log/2d8d4f92-2aa5-11e9-8010-bcee7b76a849.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/Log/CheckPoint_1_3f0108dc-2aa5-11e9-b17d-bcee7b76a849_NG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/Report/2d8d4f92-2aa5-11e9-8010-bcee7b76a849.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/templates/ui/foot.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui/templates/ui/foot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoApi/celery.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoApi/celery.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/base/BaseElementEnmu.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/base/BaseElementEnmu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/base/BaseError.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/base/BaseError.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/base/BaseExcel.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/base/BaseExcel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/base/BaseFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/base/BaseFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/base/BaseLog.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/base/BaseLog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/base/BaseOperate.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/base/BaseOperate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/base/BasePage.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/base/BasePage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/base/BaseView.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/base/BaseView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/base/BaseViewCase.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/base/BaseViewCase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/base/BaseViewCheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/base/BaseViewCheck.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/base/BaseViewDashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/base/BaseViewDashboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/base/BaseViewLogin.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/base/BaseViewLogin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/base/BaseViewModule.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/base/BaseViewModule.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/base/BaseViewSetting.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/base/BaseViewSetting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/base/BaseViewStep.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/base/BaseViewStep.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/base/BaseViewTask.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/base/BaseViewTask.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/base/BaseViewTaskModule.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/base/BaseViewTaskModule.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,112 +59,96 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/djangoApi/celery.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://E:/app/Python35/Lib/site-packages/celery/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="38">
-                <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+              <first_editor relative-caret-position="-53">
+                <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/celery_redis_win.md">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/djangoApi/celery.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/static/js/case.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/static/js/fuzz.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/static/js/task.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/static/js/taskModule.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/static/js/login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" column="28" selection-start-line="1" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/static/js/dashBoard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/static/js/module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="702">
-                <caret line="134" column="40" selection-start-line="134" selection-start-column="40" selection-end-line="134" selection-end-column="40" />
-              </first_editor>
+              <first_editor relative-caret-position="-566" />
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/tasks.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="13" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/djangoApi/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="123" column="30" selection-start-line="123" selection-start-column="30" selection-end-line="123" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/djangoApi/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="2" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-end-line="35" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/djangoApi/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -154,8 +165,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>row placeholders</find>
-      <find>”</find>
       <find>btn-modal-ne</find>
       <find>mid</find>
       <find>cid</find>
@@ -184,6 +193,8 @@
       <find>setting</find>
       <find>buildStartLine</find>
       <find>api</find>
+      <find>BaseViewDashboard</find>
+      <find>credits</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;</replace>
@@ -199,6 +210,7 @@
       <replace>api</replace>
       <replace>build_start_line</replace>
       <replace>ui</replace>
+      <replace>BaseReport</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -207,71 +219,70 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ui/base/BaseOperate.py" />
-        <option value="$PROJECT_DIR$/ui/views.py" />
-        <option value="$PROJECT_DIR$/ui/base/BaseView.py" />
-        <option value="$PROJECT_DIR$/ui/base/BasePage.py" />
-        <option value="$PROJECT_DIR$/ui/base/BaseViewTask.py" />
-        <option value="$PROJECT_DIR$/api/templates/api/reportDetail.html" />
-        <option value="$PROJECT_DIR$/ui/templates/ui/reportDetail.html" />
-        <option value="$PROJECT_DIR$/ui/base/BaseViewDashboard.py" />
-        <option value="$PROJECT_DIR$/api/base/BaseViewDashboard.py" />
-        <option value="$PROJECT_DIR$/ui/templates/ui/module.html" />
-        <option value="$PROJECT_DIR$/ui/static/js/module1.js" />
-        <option value="$PROJECT_DIR$/ui/static/js/login1.js" />
-        <option value="$PROJECT_DIR$/ui/static/js/case1.js" />
-        <option value="$PROJECT_DIR$/ui/static/js/check.js" />
-        <option value="$PROJECT_DIR$/ui/static/js/step.js" />
-        <option value="$PROJECT_DIR$/ui/templates/ui/case.html" />
-        <option value="$PROJECT_DIR$/ui/templates/ui/check.html" />
-        <option value="$PROJECT_DIR$/ui/templates/ui/step.html" />
-        <option value="$PROJECT_DIR$/ui/templates/ui/task.html" />
-        <option value="$PROJECT_DIR$/ui/static/js/taskModule1.js" />
-        <option value="$PROJECT_DIR$/api/templates/api/login.html" />
-        <option value="$PROJECT_DIR$/api/templates/api/case.html" />
-        <option value="$PROJECT_DIR$/ui/static/js/common1.js" />
-        <option value="$PROJECT_DIR$/ui/static/js/task1.js" />
-        <option value="$PROJECT_DIR$/api/templates/api/fuzz.html" />
-        <option value="$PROJECT_DIR$/api/static/js/fuzz.js" />
-        <option value="$PROJECT_DIR$/api/static/js/index.js" />
-        <option value="$PROJECT_DIR$/api/templates/api/index.html" />
-        <option value="$PROJECT_DIR$/api/templates/api/taskModule.html" />
-        <option value="$PROJECT_DIR$/api/static/js/taskModule.js" />
-        <option value="$PROJECT_DIR$/api/templates/api/module.html" />
-        <option value="$PROJECT_DIR$/api/static/js/module.js" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/ui/templates/ui/login.html" />
-        <option value="$PROJECT_DIR$/ui/templates/ui/edit-step.html" />
-        <option value="$PROJECT_DIR$/ui/templates/ui/edit-login.html" />
-        <option value="$PROJECT_DIR$/ui/templates/ui/edit-check.html" />
-        <option value="$PROJECT_DIR$/ui/templates/ui/foot.html" />
-        <option value="$PROJECT_DIR$/djangoApi/settings.py" />
-        <option value="$PROJECT_DIR$/api/models.py" />
-        <option value="$PROJECT_DIR$/djangoApi/__init__.py" />
-        <option value="$PROJECT_DIR$/djangoApi/celery.py" />
-        <option value="$PROJECT_DIR$/api/base/BaseViewTaskModule.py" />
-        <option value="$PROJECT_DIR$/api/templates/api/task.html" />
-        <option value="$PROJECT_DIR$/api/static/js/task.js" />
-        <option value="$PROJECT_DIR$/api/base/BaseViewTask.py" />
         <option value="$PROJECT_DIR$/api/tasks.py" />
+        <option value="$PROJECT_DIR$/celery_redis_win.md" />
+        <option value="$PROJECT_DIR$/api/static/Highcharts-7.1.2/highColumn.js" />
+        <option value="$PROJECT_DIR$/api/base/BaseViewDashboard.py" />
+        <option value="$PROJECT_DIR$/api/base/BasViewDashBoard.py" />
+        <option value="$PROJECT_DIR$/api/templates/api/nav-left.html" />
+        <option value="$PROJECT_DIR$/api/static/js/Highcharts-7.1.2/highColumn.js" />
+        <option value="$PROJECT_DIR$/api/static/js/Highcharts-7.1.2/highLine.js" />
         <option value="$PROJECT_DIR$/api/urls.py" />
         <option value="$PROJECT_DIR$/api/views.py" />
-        <option value="$PROJECT_DIR$/celery_redis_win.md" />
+        <option value="$PROJECT_DIR$/api/templates/api/dashBoard.html" />
+        <option value="$PROJECT_DIR$/api/base/test.py" />
+        <option value="$PROJECT_DIR$/api/base/BaseElementEnmu.py" />
+        <option value="$PROJECT_DIR$/api/base/BaseExcel.py" />
+        <option value="$PROJECT_DIR$/api/base/BaseReport.py" />
+        <option value="$PROJECT_DIR$/api/base/BaseView.py" />
+        <option value="$PROJECT_DIR$/api/base/BaseViewDashBoard.py" />
+        <option value="$PROJECT_DIR$/api/base/BaseViewFuzz.py" />
+        <option value="$PROJECT_DIR$/api/base/BaseViewLogin.py" />
+        <option value="$PROJECT_DIR$/api/base/BaseViewModule.py" />
+        <option value="$PROJECT_DIR$/api/base/BaseViewTask.py" />
+        <option value="$PROJECT_DIR$/api/base/BaseViewTaskModule.py" />
+        <option value="$PROJECT_DIR$/ui/base/BaseElementEnmu.py" />
+        <option value="$PROJECT_DIR$/ui/base/BaseError.py" />
+        <option value="$PROJECT_DIR$/ui/base/BaseExcel.py" />
+        <option value="$PROJECT_DIR$/ui/base/BaseFile.py" />
+        <option value="$PROJECT_DIR$/ui/base/BaseLog.py" />
+        <option value="$PROJECT_DIR$/ui/base/BaseOperate.py" />
+        <option value="$PROJECT_DIR$/ui/base/BasePage.py" />
+        <option value="$PROJECT_DIR$/ui/base/BaseView.py" />
+        <option value="$PROJECT_DIR$/ui/base/BaseViewCase.py" />
+        <option value="$PROJECT_DIR$/ui/base/BaseViewCheck.py" />
+        <option value="$PROJECT_DIR$/ui/base/BaseViewDashboard.py" />
+        <option value="$PROJECT_DIR$/ui/base/BaseViewLogin.py" />
+        <option value="$PROJECT_DIR$/ui/base/BaseViewModule.py" />
+        <option value="$PROJECT_DIR$/ui/base/BaseViewSetting.py" />
+        <option value="$PROJECT_DIR$/ui/base/BaseViewStep.py" />
+        <option value="$PROJECT_DIR$/ui/base/BaseViewTask.py" />
+        <option value="$PROJECT_DIR$/ui/base/BaseViewTaskModule.py" />
+        <option value="$PROJECT_DIR$/ui/views.py" />
+        <option value="$PROJECT_DIR$/ui/urls.py" />
+        <option value="$PROJECT_DIR$/ui/models.py" />
         <option value="$PROJECT_DIR$/CHANGELOG.md" />
+        <option value="$PROJECT_DIR$/djangoApi/celery.py" />
+        <option value="$PROJECT_DIR$/api/static/js/module.js" />
+        <option value="$PROJECT_DIR$/api/static/js/case.js" />
+        <option value="$PROJECT_DIR$/api/static/js/fuzz.js" />
+        <option value="$PROJECT_DIR$/api/static/js/task.js" />
+        <option value="$PROJECT_DIR$/api/static/js/taskModule.js" />
+        <option value="$PROJECT_DIR$/api/static/js/login.js" />
+        <option value="$PROJECT_DIR$/api/static/js/dashBoard.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-4" />
     <option name="width" value="1687" />
-    <option name="height" value="1014" />
+    <option name="height" value="1010" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -293,7 +304,9 @@
             <path>
               <item name="djangoApi" type="b2602c69:ProjectViewProjectNode" />
               <item name="djangoApi" type="462c0819:PsiDirectoryNode" />
-              <item name="djangoApi" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="djangoApi" type="b2602c69:ProjectViewProjectNode" />
@@ -303,25 +316,27 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\demo\djangoApi" />
-      <recent name="E:\demo\djangoApi\api\static\js" />
-      <recent name="E:\demo\djangoApi\ui\static\js" />
-      <recent name="E:\demo\djangoApi\ui\templates\ui" />
-      <recent name="E:\demo\djangoApi\ui" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\demo\djangoApi\api\static\js" />
       <recent name="E:\demo\mysite\img" />
       <recent name="E:\demo\mysite\api\templatetags" />
       <recent name="E:\demo\mysite\api" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\demo\djangoApi\api\static\js\Highcharts-7.1.2" />
+      <recent name="E:\demo\djangoApi\api\templates\api" />
+      <recent name="E:\demo\djangoApi\api\static\Highcharts-7.1.2" />
+      <recent name="E:\demo\djangoApi\api\static\js" />
+      <recent name="E:\demo\djangoApi" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -380,7 +395,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="0" width="1687" height="1014" extended-state="0" />
+    <frame x="-4" y="0" width="1687" height="1010" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2498484" />
@@ -394,7 +409,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3291714" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3291714" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4969697" weight="0.46651533" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4969697" visible="true" weight="0.27023944" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5030303" side_tool="true" weight="0.22020431" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3291714" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -434,319 +449,147 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ui/static/js/taskModule1.js">
+    <entry file="file://$PROJECT_DIR$/api/templates/api/dashBoard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/static/js/Highcharts-7.1.2/highLine.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/static/js/common.js">
+    <entry file="file://$PROJECT_DIR$/api/base/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/base/BaseElementEnmu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/base/BaseEmail.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/templates/api/case.html">
+    <entry file="file://$PROJECT_DIR$/api/base/BaseExcel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        <state relative-caret-position="38">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui/static/js/common1.js">
+    <entry file="file://$PROJECT_DIR$/api/base/BaseFile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="18" selection-start-line="7" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/templates/ui/task.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="13" column="71" selection-start-line="13" selection-start-column="71" selection-end-line="13" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/static/js/task1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+        <state relative-caret-position="38">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
           <folding>
-            <marker date="1549516938085" expanded="true" signature="1597:2246" ph="..." />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/templates/api/login.html">
+    <entry file="file://$PROJECT_DIR$/api/base/BaseLog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state>
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/templates/api/fuzz.html">
+    <entry file="file://$PROJECT_DIR$/api/base/BaseReport.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-673">
-          <caret line="17" column="66" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
+        <state relative-caret-position="38">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/static/js/taskModule.js">
+    <entry file="file://$PROJECT_DIR$/api/base/BaseView.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="75" column="11" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
+        <state relative-caret-position="38">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/static/js/login.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/static/js/index.js">
+    <entry file="file://$PROJECT_DIR$/api/base/BaseViewDashBoard.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1045">
-          <caret line="55" column="7" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
+        <state relative-caret-position="38">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding>
+            <element signature="e#1#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/static/js/fuzz.js">
+    <entry file="file://$PROJECT_DIR$/api/base/BaseViewFuzz.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-874">
-          <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="50" selection-end-column="11" />
+        <state relative-caret-position="38">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding>
+            <element signature="e#77#115#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/templates/api/taskModule.html">
+    <entry file="file://$PROJECT_DIR$/api/base/BaseViewLogin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/templates/api/module.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="14" column="66" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/static/js/module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/templates/ui/edit-step.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="50" selection-start-line="18" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/templates/ui/edit-login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/templates/ui/edit-check.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/templates/ui/edit-case.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/templates/ui/foot.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="43" selection-start-line="6" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/templates/ui/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1045">
-          <caret line="55" column="26" selection-start-line="55" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/templates/ui/setting.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="85" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/use.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="969">
-            <caret line="51" column="3" selection-start-line="51" selection-start-column="3" selection-end-line="51" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="551">
-            <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/templates/ui/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#77#113#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/base/BaseViewModule.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/templates/api/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="83" column="34" selection-start-line="83" selection-start-column="34" selection-end-line="83" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="80" column="13" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/templates/api/reportDetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="42" column="34" selection-start-line="42" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/app/Python35/Lib/site-packages/django/conf/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="200" selection-start-line="200" selection-end-line="200" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/app/Python35/Lib/site-packages/celery/task/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-456" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/base/BaseViewTaskModule.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/app/Python35/Lib/site-packages/celery/local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="190" selection-start-line="190" selection-end-line="190" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/app/Python35/Lib/site-packages/celery/app/task.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="393" selection-start-line="393" selection-end-line="393" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/base/BaseViewCase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-521">
+        <state relative-caret-position="38">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#36#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/templates/api/task.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="34" column="83" selection-start-line="34" selection-start-column="83" selection-end-line="34" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/static/js/task.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/base/BaseViewTask.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-662">
-          <caret line="27" column="64" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
+        <state relative-caret-position="38">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/djangoApi/urls.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/api/base/BaseViewTaskModule.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/djangoApi/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
+        <state relative-caret-position="1150">
           <caret line="123" column="30" selection-start-line="123" selection-start-column="30" selection-end-line="123" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangoApi/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/tasks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="13" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-end-line="35" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -759,45 +602,269 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/views.py">
+    <entry file="file://$PROJECT_DIR$/ui/base/BaseElementEnmu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+        <state relative-caret-position="38">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/base/BaseError.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/base/BaseExcel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/base/BaseFile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/base/BaseLog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#77#91#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/base/BaseOperate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#24#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/base/BasePage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/base/BaseView.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/base/BaseViewCase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#77#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/base/BaseViewCheck.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#77#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/base/BaseViewDashboard.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/djangoApi/celery.py">
+    <entry file="file://$PROJECT_DIR$/ui/base/BaseViewLogin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/app/Python35/Lib/site-packages/celery/__init__.py">
+    <entry file="file://$PROJECT_DIR$/ui/base/BaseViewModule.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="20" />
+        <state relative-caret-position="171">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding>
+            <element signature="e#77#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/base/BaseViewSetting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#76#112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/base/BaseViewStep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#77#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/base/BaseViewTask.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding>
+            <element signature="e#77#88#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/base/BaseViewTaskModule.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-566" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoApi/celery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/static/js/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/static/js/case.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/static/js/fuzz.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/static/js/task.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/static/js/taskModule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/static/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="28" selection-start-line="1" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/static/js/dashBoard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="38">
-            <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/celery_redis_win.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="702">
-            <caret line="134" column="40" selection-start-line="134" selection-start-column="40" selection-end-line="134" selection-end-column="40" />
+          <first_editor relative-caret-position="-53">
+            <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
           </first_editor>
           <second_editor />
         </state>

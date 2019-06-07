@@ -1,4 +1,7 @@
 from __future__ import absolute_import, unicode_literals
+# -*- coding=utf-8 -*-
+__author__ = 'shikun'
+__CreateAt__ = '2019/6/7-13:07'
 
 from celery import Celery
 from django.conf import settings

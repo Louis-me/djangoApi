@@ -2,6 +2,10 @@ from . import views
 from django.urls import path
 app_name = "api"
 urlpatterns = [
+    path("dashBoard", views.dashBoard, name='dashBoard'),
+    path("dashBoard_top100_case_time", views.dashBoard_top100_case_time, name='dashBoard_top100_case_time'),
+    path("dashBoard_module_case", views.dashBoard_module_case, name='dashBoard_module_case'),
+    path("dashBoard_top10_task", views.dashBoard_top10_task, name='dashBoard_top10_task'),
     path('', views.index, name='index'),
     path('login', views.login, name='login'),
     path('login_edit', views.login_edit, name='login_edit'),

@@ -1,4 +1,6 @@
-# -*- coding: utf-8 -*-
+# -*- coding=utf-8 -*-
+__author__ = 'shikun'
+__CreateAt__ = '2019/6/7-13:07'
 from selenium.webdriver.support.ui import WebDriverWait
 import selenium.common.exceptions
 from .BaseElementEnmu import Element as be

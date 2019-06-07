@@ -1,7 +1,7 @@
 var edit = 0 // 0 表示为新建，1表示为编辑
 var id = 0 // 关联的模块id
 $(function(){
-    $("#nav-left ul li:eq(3) a").css("color", "red")
+    $("#nav-left ul li:eq(5) a").css("color", "red")
     $("#btn-task-new-module").click(function(){
         $("#modal-task-module").modal("show")
         edit = 0

@@ -1,5 +1,5 @@
  $(function () {
-     $("#nav-left ul li:eq(2) a").css("color", "red")
+     $("#nav-left ul li:eq(3) a").css("color", "red")
 
      function isJSON(str) {
         if (typeof str == 'string') {
