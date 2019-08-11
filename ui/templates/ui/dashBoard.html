@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% include 'ui/header.html' %}
+
+<body>
+{% include 'ui/nav-top.html' %}
+<div class="container-fluid">
+    <div class="row">
+        {% include 'ui/nav-left.html' %}
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">DashBoard</h1>
+                <div class="page-header">
+                    <h2>模块下用例统计</h2>
+              </div>
+              <div class="well">
+                  <div id="module-case"></div>
+              </div>
+             <div class="page-header">
+                    <h2>前十个任务下用例统计</h2>
+              </div>
+              <div class="well">
+                  <div id="top10-task"></div>
+              </div>
+                    <div class="page-header">
+                    <h2>前100个用例耗时情况</h2>
+              </div>
+              <div class="well">
+                  <div id="top100-case"></div>
+              </div>
+        </div>
+        </div>
+
+    </div>
+
+<script src="/static/js/jquery-1.12.4.js"></script>
+<script src="/static/js/common1.js"></script>
+<script src="/static/js/Highcharts-7.1.2/highcharts.js"></script>
+<script src="/static/js/Highcharts-7.1.2/exporting.js"></script>
+<script src="/static/js/Highcharts-7.1.2/highColumn.js"></script>
+<script src="/static/js/Highcharts-7.1.2/highLine.js"></script>
+<script src="/static/js/dashBoard.js"></script>
+
+</body>
+</html>

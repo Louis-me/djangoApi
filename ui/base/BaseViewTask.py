@@ -70,7 +70,7 @@ class BaseViewTask:
         mo = ta.taskmodule_set.all()  # 任务下的模块
         excel_init = {}
         excel_detail = []
-        passed = failed = no_check = 0
+        passed = failed = 0
         start_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         r_time = time.time()
         _report = new_report({"name": ta.name, "uid": uid})
@@ -81,31 +81,30 @@ class BaseViewTask:
                 return JsonResponse(result)
 
             for c in list_case:
-                ls_step = list(Case.objects.get(pk=c.id).steps_set.all().values())
-                ls_check = list(Case.objects.get(pk=c.id).checks_set.all().values())
+                ls_step = list(Case.objects.get(pk=c.id).steps_set.all().values())  # 用例步骤
+                ls_check = list(Case.objects.get(pk=c.id).checks_set.all().values())  # 检查点
+                ls_data = []
                 if len(ls_step) == 0:
                     result = {'code': -1, 'msg': '无测试步骤'}
                     return JsonResponse(result)
                 if len(ls_check) == 0:
                     result = {'code': -1, 'msg': '无检查步骤'}
                     return JsonResponse(result)
-                _step = _check = ""
-                for s in ls_step:
-                    st = "步骤名字:%s_元素名:%s_扩展字段:%s_查找类型:%s_操作类型:%s" %(s["name"], s["element_info"], s.get("extend", "无"),
-                                                                    s["find_type"], s["operate_type"])
-                    _step = _step + st + "\n"
-                for lc in ls_check:
-                    lt = "检查点名字:%s_元素名:%s_查找类型:%s" % (lc["name"], lc["element_info"], lc["find_type"])
-                    _check = _check + lt +"\n"
-
-                page = PagesObjects({"driver": driver, "log_test": base_log, "name": c.name, "test_step": ls_step,"home_url": se.home_url,
-                                     "test_check": ls_check})
                 s_time = time.time()
+                ls_data.append(ls_step)  # 加入用例步骤
+                ls_common_case = list(Case.objects.get(pk=c.id).casecommoncase_set.all().values())
+                if ls_common_case:  # 如果关联了公共用例
+                    ls_data.append(ls_common_case)
+
+                page = PagesObjects({"driver": driver, "log_test": base_log, "name": c.name, "test_step": ls_data,
+                                     "home_url": se.home_url,
+                                     "test_check": ls_check})
                 page.operate()
-                res = page.check_point()
+                ch_point = page.check_point()
+                res = ch_point[0]
                 e_time = time.time()
-                app = {"name": c.name, "step": _step, "hope": _check, "report": _report,
-                       "sum_time": "%.2f" % (e_time - s_time) + "秒", "uid": uid, "result": res}
+                app = {"name": c.name, "step": ch_point[1], "hope": ch_point[2], "report": _report,
+                       "sum_time": "%.2f" % (e_time - s_time) + "秒", "uid": uid, "result": res, "extend": ch_point[3]}
 
                 if res == Element.C_CHECK["passed"]:
                     passed += 1
@@ -114,7 +113,8 @@ class BaseViewTask:
                 elif res == Element.C_CHECK["failed"]:
                     failed += 1
                     base_log.build_end_line("检查点=失败")
-                    app["img"] = base_log.check_point_ng(driver, c.name, str(uuid.uuid1()))
+                    app["img2"] = str(uuid.uuid1())  # 相对地址在页面上显示
+                    app["img"] = base_log.check_point_ng(driver, c.name, app["img2"])  # 绝对地址图片，插入到excel中
 
                 new_report_item(app)
 

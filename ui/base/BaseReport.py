@@ -11,7 +11,7 @@ from djangoApi import settings
 import os
 
 
-class BaseViewDashboard:
+class BaseReport:
 
     @staticmethod
     def index(request, page, path):

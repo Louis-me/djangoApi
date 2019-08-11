@@ -26,7 +26,7 @@ def get_driver(login_url):
 
 
 def get_login(kw):
-    app = {"log_test": kw["log_test"], "driver": kw["driver"], "name": kw["name"], "test_step": kw["test_step"]}
+    app = {"log_test": kw["log_test"], "driver": kw["driver"], "name": kw["name"], "test_step": [kw["test_step"]]}
     page = PagesObjects(app)
     return page.operate()
 
@@ -66,7 +66,8 @@ report : model report
 
 
 def new_report_item(kw):
-    kw["report"].reportitem_set.create(name=kw["name"], step=kw["step"], hope=kw["hope"], sum_time=kw["sum_time"], result=kw['result'])
+    kw["report"].reportitem_set.create(name=kw["name"], step=kw["step"], hope=kw["hope"], sum_time=kw["sum_time"],
+                                       result=kw['result'], img=kw.get("img2", "0"), extend=kw["extend"])
 
 '''
 生成excel报告

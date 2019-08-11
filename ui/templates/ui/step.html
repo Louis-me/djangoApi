@@ -15,6 +15,7 @@
              </ol>
             <h1 class="page-header">{{name}}--步骤管理</h1>
              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-step" id="btn-new">新建</button>
+             <a href="{% url 'ui:case_common_case' mid cid %}" class="btn btn-primary">关联公共用例</a>
             <input type="hidden" id="cid" value="{{cid}}" />
             <div class="table-responsive">
                 <table class="table table-striped">

@@ -25,6 +25,7 @@ class Element(object):
     GET_VALUE = "get_value"
     WAIT_TIME = 20  # 查找元素等待时间
     MOVE_TO_ELEMENT = "move_to_element"  # 鼠标悬停
+    NO_OPERATE = "0" # 无操作
     DEFAULT_OPERATE = "default_operate"  # 默认值
     SWITCH_TO_WINDOW = "switch_to_window"
     SWITCH_TO_FRAME = "switch_to_frame"

@@ -1,4 +1,6 @@
 # -*- coding=utf-8 -*-
+import json
+
 __author__ = 'shikun'
 __CreateAt__ = '2019/6/7-13:07'
 import os
@@ -58,6 +60,7 @@ class OperateReport:
         worksheet.merge_range('A2:E2', '测试测试概括', define_format_H2)
 
     def detail(self, worksheet, info):
+        # print("=datail=%s=" % info)
         self.__detail_title(worksheet)
         temp = 3
         for item in info:
@@ -65,6 +68,7 @@ class OperateReport:
             self.__write_center(worksheet, "A" + str(temp), item["name"])
             self.__write_center(worksheet, "B" + str(temp), item["step"])
             self.__write_center(worksheet, "C" + str(temp), item["hope"])
+            self.__write_center(worksheet, "E" + str(temp), item["extend"])
             if item["result"] == 0:
                 result = "通过"
             elif item["result"] == -1:
@@ -73,14 +77,15 @@ class OperateReport:
                 result = "未检测"
             self.__write_center(worksheet, "D" + str(temp), result)
 
+
             if item.get("img", "false") == "false":
-                self.__write_center(worksheet, "E" + str(temp), "")
+                self.__write_center(worksheet, "F" + str(temp), "")
                 worksheet.set_row(temp, 30)
             else:
-                worksheet.insert_image('E' + str(temp), item["img"],
+                worksheet.insert_image('F' + str(temp), item["img"],
                                        {'x_scale': 0.1, 'y_scale': 0.1, 'border': 1})
                 worksheet.set_row(temp - 1, 110)
-            self.__write_center(worksheet, "F" + str(temp), item["sum_time"])
+            self.__write_center(worksheet, "G" + str(temp), item["sum_time"])
 
             temp += 1
 
@@ -92,6 +97,7 @@ class OperateReport:
         worksheet.set_column("D:D", 20)
         worksheet.set_column("E:E", 20)
         worksheet.set_column("F:F", 20)
+        worksheet.set_column("G:G", 20)
 
         worksheet.set_row(1, 30)
         worksheet.set_row(2, 30)
@@ -99,16 +105,18 @@ class OperateReport:
         worksheet.set_row(4, 30)
         worksheet.set_row(5, 30)
         worksheet.set_row(6, 30)
+        worksheet.set_row(7, 30)
 
-        worksheet.merge_range('A1:I1', '测试详情', self.__get_format({'bold': True, 'font_size': 18, 'align': 'center',
+        worksheet.merge_range('A1:G1', '测试详情', self.__get_format({'bold': True, 'font_size': 18, 'align': 'center',
                                                                     'valign': 'vcenter', 'bg_color': 'blue',
                                                                     'font_color': '#ffffff'}))
         self.__write_center(worksheet, "A2", '用例名')
         self.__write_center(worksheet, "B2", '步骤')
         self.__write_center(worksheet, "C2", '检查点')
         self.__write_center(worksheet, "D2", '是否通过 ')
-        self.__write_center(worksheet, "E2", '截图 ')
-        self.__write_center(worksheet, "F2", '耗时 ')
+        self.__write_center(worksheet, "E2", '备注 ')
+        self.__write_center(worksheet, "F2", '截图 ')
+        self.__write_center(worksheet, "G2", '耗时 ')
 
     def close(self):
         self.wd.close()
@@ -127,8 +135,8 @@ class OperateReport:
         chart1 = self.wd.add_chart({'type': 'pie'})
         chart1.add_series({
             'name': '自动化测试统计',
-            'categories': '=测试总况!$C$3:$C$5',
-            'values': '=测试总况!$D$3:$D$5',
+            'categories': '=测试总况!$C$3:$C$4',
+            'values': '=测试总况!$D$3:$D$4',
         })
         chart1.set_title({'name': '测试统计'})
         chart1.set_style(10)

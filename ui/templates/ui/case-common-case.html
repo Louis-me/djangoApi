@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% include 'ui/header.html' %}
+
+<body>
+{% include 'ui/nav-top.html' %}
+
+<div class="container-fluid">
+    <div class="row">
+          {% include 'ui/nav-left.html' %}
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+             <ol class="breadcrumb">
+                  <li><a href="{% url 'ui:module'  %}">模块</a></li>
+                  <li><a href="{% url 'ui:case' mid %}">用例</a></li>
+                  <li><a href="{% url 'ui:step' mid cid %}">步骤</a></li>
+                   <li class="active">关联公共用例</li>
+            </ol>
+             <h1 class="page-header">{{name}}--关联公共用例</h1>
+            <input type="hidden" value="{{cid}}" id="cid">
+             <button type="button" class="btn btn-primary" id="btn-new" data-toggle="modal" data-target="#modal-case-common-case">关联公共用例</button>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>模块名</th>
+                        <th>排序</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% if common_case_list %}
+                    {% for i in common_case_list %}
+                    <tr id="{{i.id}}" cc-id="{{i.cc_id}}">
+                        <td>{{i.name}}</td>
+                        <td>{{i.sort}}</td>
+                        <td>
+                            <input type="button" class="btn btn-lg btn-primary btn-edit" value="编辑" data-toggle="modal" data-target="#modal-case-common-case">
+                            <button  class="btn btn-lg btn-primary btn-del"> 删除</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    {% else %}
+                    <tr>
+                        <td>无数据</td>
+                    </tr>
+                    {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'ui/del.html' %}
+{% include 'ui/edit-case-common-case.html' %}
+{% include 'ui/foot.html' %}
+<script src="/static/js/common1.js"></script>
+<script src="/static/js/case-common-case.js"></script>
+
+</body>
+</html>

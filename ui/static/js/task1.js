@@ -1,7 +1,7 @@
 var edit = 0 // 0 表示为新建，1表示为编辑
 var id = 0 // 任务id
 $(function(){
-     $("#nav-left ul li:eq(5) a").css("color", "red")
+     $("#nav-left ul li:eq(7) a").css("color", "red")
 
 
     $(".btn-edit").click(function(){

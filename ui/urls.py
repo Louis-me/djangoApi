@@ -5,6 +5,10 @@ from . import views
 from django.urls import path
 app_name = "ui"
 urlpatterns = [
+    path("dashBoard", views.dashBoard, name='dashBoard'),
+    path("dashBoard_top100_case_time", views.dashBoard_top100_case_time, name='dashBoard_top100_case_time'),
+    path("dashBoard_module_case", views.dashBoard_module_case, name='dashBoard_module_case'),
+    path("dashBoard_top10_task", views.dashBoard_top10_task, name='dashBoard_top10_task'),
     path('', views.index, name='index'),
     path('login', views.login, name='login'),
     path('login_edit', views.login_edit, name='login_edit'),
@@ -41,4 +45,17 @@ urlpatterns = [
     path('task_module_del', views.task_module_del, name="task_module_del"),
     path("setting", views.setting, name="setting"),
     path("setting_edit", views.setting_edit, name="setting_edit"),
+    path("common_case", views.common_case, name="common_case"),
+    path("common_case_new", views.common_case_new, name="common_case_new"),
+    path("common_case_edit", views.common_case_edit, name="common_case_edit"),
+    path("common_case_del", views.common_case_del, name="common_case_del"),
+    path("<int:id>/common_case_step/", views.common_case_step, name="common_case_step"),
+    path("common_case_step_new", views.common_case_step_new, name="common_case_step_new"),
+    path("common_case_step_edit", views.common_case_step_edit, name="common_case_step_edit"),
+    path("common_case_step_del", views.common_case_step_del, name="common_case_step_del"),
+    path("<int:mid>/<int:cid>/case_common_case/", views.case_common_case, name="case_common_case"),
+    path("case_common_case_new", views.case_common_case_new, name="case_common_case_new"),
+    path("case_common_case_edit", views.case_common_case_edit, name="case_common_case_edit"),
+    path("case_common_case_del", views.case_common_case_del, name="case_common_case_del")
+
 ]

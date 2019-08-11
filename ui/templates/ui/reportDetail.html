@@ -25,6 +25,8 @@
                         <th>检查步骤</th>
                         <th>耗时</th>
                         <th>是否通过</th>
+                        <th>备注</th>
+                        <th>截图</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -32,15 +34,21 @@
                     {% for i in  case_list %}
                     <tr id="{{i.id}}">
                         <td>{{i.name}}</td>
-                        <td class="break-word-w200">{{i.step}}</td>
-                        <td class="break-word-w200">{{i.hope}}</td>
+                        <td style="word-wrap:break-word; max-width:400px">{{i.step|linebreaksbr }}</td>
+                        <td style="word-wrap:break-word; max-width:300px">{{i.hope}}</td>
                         <td>{{i.sum_time}}</td>
                           {% if i.result == 0 %}
                           <td>通过</td>
+                            <td></td>
+                            <td></td>
                          {% elif i.result == -1 %}
                              <td>失败</td>
+                            <td>{{i.extend}}</td>
+                            <td><a href="http://192.168.56.1:8001/ui/Log/{{i.img}}.png" target="_blank"><img src="http://192.168.56.1:8001/ui/Log/{{i.img}}.png" width="500px" height="600px"></a></td>
                          {% else %}
                            <td>未检测</td>
+                            <td></td>
+                            <td></td>
                         {% endif %}
                     </tr>
                     {% endfor %}

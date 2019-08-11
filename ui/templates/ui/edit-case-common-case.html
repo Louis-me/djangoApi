@@ -1,0 +1,44 @@
+
+<div class="modal fade " id="modal-case-common-case">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">关联模块</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form" id="m-form">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">模块</label>
+                        <div class="col-sm-8">
+                                <select id="sel-common-case" class="form-control">
+                                    {% if common_case %}
+                                        {% for i in common_case %}
+                                            <option value="{{i.id}}">{{i.name}}</option>
+                                        {% endfor %}
+                                    {% else %}
+                                      <option value="-1">请新建公共用例</option>
+                                    {% endif %}
+                                </select>
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <label class="col-sm-2 control-label">排序</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="sort" id="sort" class="form-control"  />
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-left:100px;">
+                        <button type="submit" class="btn btn-default" datadismiss="modal">
+                            确定</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">取消
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>

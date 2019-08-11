@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% include 'ui/header.html' %}
+<body>
+{% include 'ui/nav-top.html' %}
+<div class="container-fluid">
+    <div class="row">
+         {% include 'ui/nav-left.html' %}
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+             <ol class="breadcrumb">
+                  <li><a href="{% url 'ui:common_case'  %}">公共用例</a></li>
+                  <li><a href="{% url 'ui:common_case_step' cc_id  %}">{{name}}</a></li>
+                  <li class="active">步骤管理</li>
+             </ol>
+            <h1 class="page-header">{{name}}--步骤管理</h1>
+             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-common-case-step" id="btn-new">新建</button>
+            <input type="hidden" id="cc_id" value="{{cc_id}}" />
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                         <th>名字</th>
+                        <th>元素</th>
+                        <th>查找类型</th>
+                        <th>操作方法</th>
+                        <th>扩展</th>
+                        <th>排序</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% if step_list %}
+                    {% for i in  step_list %}
+                    <tr id="{{i.id}}">
+                        <td>{{i.name}}</td>
+                        <td>{{i.element_info}}</td>
+                        <td>{{i.find_type}}</td>
+                        <td>{{i.operate_type}}</td>
+                        <td>{{i.extend}}</td>
+                        <td>{{i.sort}}</td>
+                        <td>
+                            <input type="button" class="btn btn-lg btn-primary btn-edit" value="编辑"  data-toggle="modal" data-target="#modal-common-case-step">
+                            <input type="button"  class="btn btn-lg btn-primary btn-del" value="删除">
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    {% else %}
+                    <tr>
+                        <td>无数据</td>
+                    </tr>
+                    {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'ui/del.html' %}
+{% include 'ui/edit-common-case-step.html' %}
+{% include 'ui/foot.html' %}
+<script src=" /static/js/common1.js"></script>
+<script src=" /static/js/common-case-step.js"></script>
+
+
+</body>
+</html>

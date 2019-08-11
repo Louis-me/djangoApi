@@ -13,6 +13,8 @@ from .base.BaseViewFuzz import BaseViewFuzz
 from .base.BaseViewTask import BaseViewTask
 
 
+# =====dashBoard Start============
+
 def dashBoard(request):
     return BaseViewDashBoard.dashBoard(request, "api/dashBoard.html")
 
@@ -28,6 +30,10 @@ def dashBoard_top10_task(request):
 def dashBoard_top100_case_time(request):
     return BaseViewDashBoard.dashBoard_top100_case_time(request)
 
+
+# =====dashBoard End============
+
+# ========测试报告 Start============
 
 def index(request):
     page = request.GET.get('page')
@@ -56,6 +62,9 @@ def download_excel(request):
     return BaseReport.download_excel(request.POST["excel"])
 
 
+# ========测试报告 End============
+
+
 # 接口测试需要登录
 def login(request):
     return BaseViewLogin.login(request, "api/login.html")
@@ -68,6 +77,8 @@ def login_edit(request):
     params = request.POST["params"]
     return BaseViewLogin.login_edit({"url": url, "params": params})
 
+
+# ========模块 Start============
 
 # 模块列表
 def module(request):
@@ -92,6 +103,12 @@ def module_edit(request):
 def module_del(request):
     m_id = request.POST["mid"]
     return BaseViewModule.module_del(m_id)
+
+
+# ========模块 End============
+
+
+# ========模块下用例 Start============
 
 
 # 模块下的用例列表
@@ -131,6 +148,10 @@ def case_edit(request):
 @csrf_exempt
 def case_del(request):
     return BaseViewCase.case_del(request.POST["cid"])
+
+# ========模块下用例 End============
+
+# ========模块的用例下的模糊用例 Start============
 
 
 # 模糊用列表
@@ -179,6 +200,10 @@ def fuzz_del(request):
     return BaseViewFuzz.fuzz_del(fid)
 
 
+# ========模块的用例下的模糊用例 End============
+
+# ========任务 Start============
+
 def task(request):
     return BaseViewTask.tasks(request, "api/task.html")
 
@@ -202,6 +227,7 @@ def task_del(request):
     return BaseViewTask.task_del(id)
 
 
+
 @csrf_exempt
 def task_run(request):
     bc.task_run.delay(request.POST["tid"])
@@ -214,6 +240,10 @@ def add(request, *args, **kwargs):
     result = {'code': 0, 'msg': '这是一个后台任务'}
     return JsonResponse(result)
 
+# ========任务 End============
+
+
+# ========任务关联模块 Start============
 
 def task_module(request, id):
     return BaseViewTaskModule.task_module(request, "api/taskModule.html", id)
@@ -239,3 +269,4 @@ def task_module_edit(request):
 @csrf_exempt
 def task_module_del(request):
     return BaseViewTaskModule.task_module_del(request.POST["tmid"])
+# ========任务关联模块 End============

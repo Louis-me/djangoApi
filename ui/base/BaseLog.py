@@ -92,7 +92,8 @@ class Log:
         :param driver:
         :return:
         """
-        name = os.path.join(PATH("../log/"), "CheckPoint_" + str(self.check_no) + "_" + uid + "_NG.png")
+        # name = os.path.join(PATH("../log/"), "CheckPoint_" + str(self.check_no) + "_" + uid + "_NG.png")
+        name = os.path.join(PATH("../log/"), uid + ".png")
         # wait for animations to complete before taking screenshot
         sleep(1)
         driver.get_screenshot_as_file(name)

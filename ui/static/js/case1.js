@@ -2,7 +2,7 @@
 var edit = 0 //0 表示为新建，1表示为编辑
 
  $(function () {
-     $("#nav-left ul li:eq(3) a").css("color", "red")
+     $("#nav-left ul li:eq(6) a").css("color", "red")
       validate()
      $(".btn-edit").click(function () {
          edit = 1

@@ -2,7 +2,7 @@ var edit = 0 // 0 表示为新建，1表示为编辑
 var id = 0
 
  $(function () {
-    $("#nav-left ul li:eq(3) a").css("color", "red")
+    $("#nav-left ul li:eq(6) a").css("color", "red")
      validate()
       $(".btn-del").click(function () {
          id = $(this).parents("tr").attr("id")
