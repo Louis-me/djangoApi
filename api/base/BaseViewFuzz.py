@@ -8,11 +8,11 @@ from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
 
 from api.base.BaseElementEnmu import Element
-from api.base.BaseParams import BaseParams
+# from api.base.BaseParams import BaseParams
 from ..models import Case, FuzzCase
 from ..base.BaseFile import BaseFile as bf
-
-
+from ..base.BaseFuzzParams import BaseFuzzParams
+import ast
 class BaseViewFuzz:
 
     @staticmethod
@@ -25,11 +25,12 @@ class BaseViewFuzz:
     @staticmethod
     @csrf_exempt
     def batch_fuzz(id):
-        bf.mk_file(Element.PICT_PARAM)
-        bf.mk_file(Element.PICT_PARAM_RESULT)
+        # bf.mk_file(Element.PICT_PARAM)
+        # bf.mk_file(Element.PICT_PARAM_RESULT)
         c = Case.objects.get(pk=id)
-        md = model_to_dict(c)
-        params = BaseParams().param_fi(md["params"])["params"]
+        # md = model_to_dict(c)
+        # params = BaseParams().param_fi(md["params"])["params"]
+        params = BaseFuzzParams().param_fi(ast.literal_eval(c.params))
         for i in params:
             _info = i["info"]
             i.pop("info")

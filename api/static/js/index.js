@@ -26,8 +26,7 @@ var id = 0
      $(".btn-log").click(function(){
         $.rpc.req("download_log","post",{ "log": $(this).attr("log")},function(resp){
             if (resp && resp["code"] == 0) {
-                    alert("成功")
-                     location.reload()
+                       window.location.href = resp["path"]
              } else {
                      if (resp && resp["code"] ) {
                          alert(resp.msg)
@@ -42,8 +41,8 @@ var id = 0
       $(".btn-excel").click(function(){
            $.rpc.req("download_excel","post",{ "excel": $(this).attr("excel")},function(resp){
             if (resp && resp["code"] == 0) {
-                    alert("成功")
-                     location.reload()
+                window.location.href = resp["path"]
+
              } else {
                      if (resp && resp["code"] ) {
                          alert(resp.msg)
